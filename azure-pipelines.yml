@@ -13,7 +13,6 @@ steps:
       api_location: 'api'
       output_location: ''
       azure_static_web_apps_api_token: $(www-thepaynetrain-com-ds)
-      
 - task: AzureKeyVault@2
   inputs:
     azureSubscription: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
