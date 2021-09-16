@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal CV Website Sample code">
+    <meta name="author" content="Lee Payne">
+
+    <title>Lee Payne - Azure & AWS samples</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Lee Payne - Samples</span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#vision">Image Identification</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#ocr">OCR example</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#sbmessage">Service Bus example</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#docker">Docker example's</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    This page will present a number of samples of Azure functions and provide details on how they work which will hopefully be useful to other people, they are all live, so you can see the result immediatly, sample code, comments and diagrams are availible underneath each one.
+    <div class="container-fluid p-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="vision">
+            <div class="w-100">
+                <h2>Picture Analysis</h2><br/>
+                This uses Azure cognitive services to analyse an image and tell you what it is and some tags to describe it.<br/>
+                <form onsubmit="return submitForm()" enctype="multipart/form-data">
+                    <label for="URL">Please choose a file:</label>
+                    <input type="file" id="URL" name="URL"><br />
+                    <input type="submit" value="Submit" />
+                </form>
+            
+                <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
+                <script>
+                    function submitForm() {
+ var files = document.getElementById('URL').files;
+var formData = new FormData();
+
+for (var key in files) {
+    // is the item a File?
+    if (files.hasOwnProperty(key) && files[key] instanceof File) {
+        formData.append(key, files[key]);
+    }
+}
+                           superagent.post('https://prod-10.ukwest.logic.azure.com:443/workflows/764c5779491c4f338e3d4e4bc4b58f9f/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=piHi9q9imskJ_HwQa5xP5RSsZffDB_Uy8dLHI_5N1XA')
+                            .send(formData)
+                            .end(function(err, res){
+                                if (err || !res.ok) {
+                                    alert('Whoops. Something went wrong.');
+                                } else {
+                                    str = res.body[1].replace(/"/g,"");
+                                    alert("I think you uploaded a picture of " + res.body[0].substring(2, res.body[0].length -2)+ "\nI think the words to describe it are: " + str.substring(1,str.length-1))
+                                    window.location.href = "samples.html";
+                                }
+                            });
+                            
+                        return false;
+                    }
+                </script>
+ <br/>
+ <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2FimageIdentify.json" target=”_blank”>Image Analysis JSON definition for Azure logic apps</a><br/>
+ <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2FimageIdentify%2Chtml" target=”_blank”>Image Analysis HTML file to trigger the logic app</a><br/>
+ <img src="img/samples/imageAnalysis.PNG">
+                </div>
+               
+          
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="ocr">
+            <div class="w-100">
+                <h2>OCR Analysis</h2><br/>
+                This uses Azure cognitive services to take a image and return a plain text version of it.<br/>
+                <form onsubmit="return submitocr()" enctype="multipart/form-data">
+                    <label for="OCR">Please choose a file:</label>
+                    <input type="file" id="OCR" name="OCR"><br />
+                    <input type="submit" value="Submit" />
+                </form>
+            
+                <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
+                <script>
+                    function submitocr() {
+ var fileocr = document.getElementById('OCR').files;
+var formDataocr = new FormData();
+
+for (var keyocr in fileocr) {
+    // is the item a File?
+    if (fileocr.hasOwnProperty(keyocr) && fileocr[keyocr] instanceof File) {
+        formDataocr.append(keyocr, fileocr[keyocr]);
+    }
+}
+                           superagent.post('https://prod-07.ukwest.logic.azure.com:443/workflows/efd6216945c84015a1dc76f9bdc403c2/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=N3TA3Oanw2pJ87qMSsFXjuhb5Prddyflg6o6dZaK5dI')
+                            .send(formDataocr)
+                            .end(function(ocrerr, resocr){
+                                if (ocrerr || !resocr.ok) {
+                                    alert('Whoops. Something went wrong.');
+                                } else {
+                                        window.location = resocr.body[0];
+                                        //window.location= 'https:/lapitstore.blob.core.windows.net/vision/Guid.txt';
+                                        element.click();
+                                       
+                                }
+                            });
+                            
+                        return false;
+                    }
+                </script>
+                <br/>
+                <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2FdetectText.json" target=”_blank”>OCR JSON definition for Azure logic apps</a><br/>
+                <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2FdetectText.html" target=”_blank”>OCR HTML file to trigger the logic app</a><br/>
+                <img src="img/samples/TextAnalysis.PNG">
+            </div>
+          
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="sbmessage">
+            <div class="w-100">
+            <h2>Add a message to the queue</h2><br/>
+            <form onsubmit="return sbaddsubmitForm()">
+                Message: <br />
+                <textarea id="form-sbaddmessage" rows="4" cols="20"></textarea><br />
+                <input type="submit" value="Submit" />
+            </form>
+        
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
+            <script>
+                function sbaddsubmitForm() {
+                    superagent
+                        .post('https://prod-28.uksouth.logic.azure.com:443/workflows/06ffc05c75964d79bd8a5c7991ec1562/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0TessRPraU9gTtmUpad9AVGiUyDnPKVEiVwlnSwSJ6k')                       
+                         .send({
+                            message: document.getElementById('form-sbaddmessage').value
+                        })
+                        .end(function(sbadderr, sbaddres){
+                            if (sbadderr || !sbaddres.ok) {
+                                alert('Whoops. Something went wrong.');
+                            } else {
+                                window.location.href = "samples.html#sbmessage";
+                            }
+                        });
+                    return false;
+                }
+            </script>
+            <br/>
+<h2>Remove a message from the queue</h2>
+                <form onsubmit="return sbgetsubmitForm()">
+                    Message: <br />
+                    <textarea id="form-sbgetmessage"  rows="4" cols="20" readonly></textarea><br />
+                    <input type="submit" value="Submit" />
+                </form>
+            
+                <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
+                <script>
+                    function sbgetsubmitForm() {
+                        superagent
+                            .post('https://prod-15.uksouth.logic.azure.com:443/workflows/5f290cd4e0f44e8aaa1c180601443c93/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=nuO6RizEm9SFJEHNQ-DTIsgHBd9GALC7n3XN3_Jy94k')
+                            .send({
+                                message: document.getElementById('form-sbgetmessage').value
+                            })
+                            .end(function(sbgeterr, sbgetres){
+                                if (sbgeterr || !sbgetres.ok) {
+                                    document.getElementById("form-sbgetmessage").value = "There are no messages in the queue";
+                                } else {
+                                    document.getElementById("form-sbgetmessage").value = sbgetres.body[0];
+                                }
+                            });
+                        return false;
+                    }
+                </script>
+                <br/>
+                <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2Fpush-message.json" target=”_blank”>Servicebus push message JSON definition for Azure logic apps</a><br/>
+                <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2Fpull-message.json" target=”_blank”>Servicebus pull message JSON definition for Azure logic apps</a><br/>
+                <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2FAzure%2FLogicApp%2Fservicebus.html" target=”_blank”>Servicebus HTML file to trigger the logic app</a><br/><br/>
+                Pull a message from the queue </br><img src="img/samples/pull-message.png"></br></br>
+                Push a message to the queue </br><img src="img/samples/push-message.png">
+                </div>
+                </section>
+</div>
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="docker">
+    <div class="w-100">
+    <h2>Docker examples</h2><br/>
+    In order to get a docker copy of this homepage you can run the following command to get it: "docker pull lapayne/homepage:home-git"</br>    
+    <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2Fdocker%2FHomePage-git.docker&version=GBmaster" target=”_blank”>Creating a docker image using a git pull using apache/centos</a></br>
+        <a href="https://dev.azure.com/lapayne/_git/scripts?path=%2Fdocker%2Fhomepage-copy.docker&version=GBmaster" target=”_blank”>Creating a docker image using a file copy using apache/centos</a></br>
+        
+    </div>
+    </section>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+</body>
+
+</html>
