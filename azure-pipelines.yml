@@ -7,8 +7,9 @@ pool:
 steps:
   - checkout: self
     submodules: true
-- task: TerraformInstaller@0
-  inputs:
+
+  - task: TerraformInstaller@0
+    inputs:
     terraformVersion: '2.61.0'
 
   - task: AzureStaticWebApp@0
