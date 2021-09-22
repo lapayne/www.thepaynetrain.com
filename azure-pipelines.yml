@@ -7,7 +7,7 @@ pool:
 resources:
   repositories:
   - repository: terraformscripts
-    endpoint: scripts
+    endpoint: scripts/scripts
     type: git
     name: terraformscripts
 steps:
