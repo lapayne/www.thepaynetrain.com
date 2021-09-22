@@ -29,7 +29,7 @@ steps:
      backendAzureRmResourceGroupName: 'thepaynetrain-com-rg'
      backendAzureRmStorageAccountName: 'thepaynetrainsa'
      backendAzureRmContainerName: 'terraform'
-     backendAzureRmKey: 'ymOO2sG1y3cG5vG/kfw1MELa+XIyDa98KSpeZZ7yyJH1r/s54CmULmW9ItrK9NFgiZZuJp3DcCyms+I+RfsOhQ=='
+     backendAzureRmKey: 'www-thepaynetrain-com.prod.terraform.tfstate'
   
   - task: TerraformTaskV2@2
     inputs:
