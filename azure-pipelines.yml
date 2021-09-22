@@ -6,7 +6,7 @@ pool:
 
 resources:
   repositories:
-  - repository: scripts/scripts
+  - repository: scripts
     endpoint: scripts
     type: git
     name: scripts
