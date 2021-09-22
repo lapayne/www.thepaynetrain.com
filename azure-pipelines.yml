@@ -6,7 +6,7 @@ pool:
 
 resources:
   repositories:
-  - repository: terraformscripts
+  - repository: scripts
     endpoint: scripts
     type: git
     name: scripts
