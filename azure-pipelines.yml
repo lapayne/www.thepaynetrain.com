@@ -13,6 +13,8 @@ resources:
 steps:
   - checkout: self
     submodules: true 
+  - checkout: scripts
+    submodules: true
 
   - task: TerraformInstaller@0
     inputs:
