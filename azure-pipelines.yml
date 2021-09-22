@@ -7,9 +7,9 @@ pool:
 resources:
   repositories:
   - repository: terraformscripts
-    endpoint: scripts/scripts
+    endpoint: scripts
     type: git
-    name: terraformscripts
+    name: scripts
 steps:
   - checkout: self
     submodules: true 
