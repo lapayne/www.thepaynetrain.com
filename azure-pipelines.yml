@@ -7,7 +7,6 @@ pool:
 resources:
   repositories:
   - repository: scripts
-    #endpoint: scripts
     type: git
     name: scripts/scripts
 steps:
@@ -39,7 +38,7 @@ steps:
       environmentServiceNameAzureRM: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
   - task: AzureStaticWebApp@0
     inputs:
-      app_location: '/home/vsts/work/1/s/www.thepaynetrain.com/'
+      app_location: '/'
       api_location: 'api'
       output_location: ''
       azure_static_web_apps_api_token: $(www-thepaynetrain-com-ds)
