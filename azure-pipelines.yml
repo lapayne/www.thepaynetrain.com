@@ -4,9 +4,15 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+  - repository: terraformscripts
+    endpoint: scripts
+    type: git
+    name: terraformscripts
 steps:
   - checkout: self
-    submodules: true
+    submodules: true 
 
   - task: TerraformInstaller@0
     inputs:
