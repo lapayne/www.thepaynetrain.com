@@ -6,7 +6,24 @@
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.preDeployTask": "npm prune (functions)",
     "cSpell.words": [
+        "Apim",
+        "bodytxt",
+        "Dataocr",
         "endpointsuffix",
-        "ingestionendpoint"
+        "fileocr",
+        "ingestionendpoint",
+        "keyocr",
+        "minidives",
+        "ocrerr",
+        "resocr",
+        "sbadderr",
+        "sbaddmessage",
+        "sbaddres",
+        "sbaddsubmit",
+        "sbgeterr",
+        "sbgetmessage",
+        "sbgetres",
+        "sbgetsubmit",
+        "submitocr"
     ]
 }
