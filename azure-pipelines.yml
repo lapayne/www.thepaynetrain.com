@@ -9,7 +9,7 @@ steps:
     submodules: true
   - task: TerraformInstaller@0
     inputs:
-      terraformVersion: '2.61'
+      terraformVersion: '2.61
   - task: TerraformTaskV2@2
     inputs:
       provider: 'azurerm'
