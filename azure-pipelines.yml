@@ -30,6 +30,13 @@ steps:
      backendAzureRmStorageAccountName: 'thepaynetrainsa'
      backendAzureRmContainerName: 'terraform'
      backendAzureRmKey: 'ymOO2sG1y3cG5vG/kfw1MELa+XIyDa98KSpeZZ7yyJH1r/s54CmULmW9ItrK9NFgiZZuJp3DcCyms+I+RfsOhQ=='
+  
+  - task: TerraformTaskV2@2
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      workingDirectory: '/home/vsts/work/1/s/scripts/terraform/Azure/thepaynetrain.com/www'
+      environmentServiceNameAzureRM: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
   - task: AzureStaticWebApp@0
     inputs:
       app_location: '/'
