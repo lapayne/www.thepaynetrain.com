@@ -7,9 +7,9 @@ pool:
 resources:
   repositories:
   - repository: scripts
-    endpoint: scripts
+    #endpoint: scripts
     type: git
-    name: scripts
+    name: scripts/scripts
 steps:
   - checkout: self
     submodules: true 
