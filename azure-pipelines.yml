@@ -9,7 +9,7 @@ resources:
   - repository: scripts
     type: git
     name: scripts/scripts
-  - repository: thepaynetrain
+  - repository: www.thepaynetrain.com
     type: git
     name: www.thepaynetrain.com
 steps:
