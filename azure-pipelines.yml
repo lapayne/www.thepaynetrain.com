@@ -9,11 +9,8 @@ resources:
   - repository: scripts
     type: git
     name: scripts/scripts
-  - repository: www.thepaynetrain.com
-    type: git
-    name: www.thepaynetrain.com
 steps:
-  - checkout: thepaynetrain
+  - checkout: self
     submodules: true 
   - checkout: scripts
     submodules: true
