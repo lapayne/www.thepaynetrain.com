@@ -23,7 +23,7 @@ steps:
     inputs:
      provider: 'azurerm'
      command: 'init'
-     workingDirectory: '/home/vsts/work/1/s/scripts/terraform/Azure/thepaynetrain.com/www'
+     workingDirectory: '/home/vsts/work/1/s/scripts/terraform/sites/thepaynetrain.com/www'
      backendServiceArm: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
      backendAzureRmResourceGroupName: 'thepaynetrain-com-rg'
      backendAzureRmStorageAccountName: 'thepaynetrainsa'
@@ -34,7 +34,7 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'apply'
-      workingDirectory: '/home/vsts/work/1/s/scripts/terraform/Azure/thepaynetrain.com/www'
+      workingDirectory: '/home/vsts/work/1/s/scripts/terraform/sites/thepaynetrain.com/www'
       environmentServiceNameAzureRM: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
   - task: AzureStaticWebApp@0
     inputs:
