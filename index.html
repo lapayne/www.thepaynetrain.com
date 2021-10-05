@@ -1206,7 +1206,7 @@ if (fileocr.hasOwnProperty(keyocr) && fileocr[keyocr] instanceof File) {
 </div>
 
 <script>
-  fetch("https://www.thepaynetrain.com/quotes")
+  fetch(window.location.origin + "/quotes")
   .then(response => response.body)
 .then(rb => {
   const reader = rb.getReader();
