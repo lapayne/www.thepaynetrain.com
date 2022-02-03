@@ -43,17 +43,7 @@ steps:
       output_location: ''
       workingDirectory: '/home/vsts/work/1/s/www.thepaynetrain.com'
       azure_static_web_apps_api_token: $(www-thepaynetrain-com-ds)
-  - task: S3Upload@1
-    inputs:
-      awsCredentials: 'AWS S3'
-      regionName: 'eu-west-2'
-      bucketName: 'www.thepaynetrain.com'
-      sourceFolder: '/home/vsts/work/1/s/www.thepaynetrain.com'
-      globExpressions: '**'
-      filesAcl: 'public-read'
-      keyManagement: 'awsManaged'
-      encryptionAlgorithm: 'AES256'
-      createBucket: true
+
   - task: AzureKeyVault@2
     inputs:
       azureSubscription: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
