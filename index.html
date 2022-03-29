@@ -978,7 +978,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <form onsubmit="submitForm()">
+                    <form onsubmit="return submitForm()">
                       Message: <br />
                       <textarea id="form-message" rows="10" cols="40" title="message"></textarea><br />
                       <input type="submit" value="Submit" class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">
@@ -1001,31 +1001,17 @@
 function submitForm() {
                         const sgkey = "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"
                         const message = document.getElementById('form-message').value
-                        var emailBody = {
-                          'personalizations': [{
-	'to': [{
-		'email': 'lee@thepaynetrain.com'
-	}]
-}],
-'from': {
-	'email': 'contact@thepaynetrain.com'
-},
-'subject': 'Email from paynetrain contact form',
-'content': [{
-	'type': 'text/plain',
-	'value': 'and easy to do anywhere, even with cURL'
-}]
-};
-
+                        var emailBody = JSON.stringify('{"personalizations":[{"to":[{"email":"lee@thepaynetrain.com"}]}],"from":{"email":"contact@thepaynetrain.com"},"subject":"Emailfrompaynetraincontactform","content":[{"type":"text/plain","value":"message"}]}')
 var emailOptions = {
 method: 'POST',
 headers: {
   'Authorization': 'Bearer ' + sgkey,
-  'content-type': 'application/json'
+  'content-type': 'application/json',
+  'accept': 'application/json'
 },
-body: JSON.stringify(emailBody)
+body: emailBody
  };
- let response = await remoteFetchAsync("https://api.sendgrid.com/v3/mail/send", emailOptions)
+fetch("https://api.sendgrid.com/v3/mail/send", emailOptions)
 .then((result) => {
     if (result.status != 200) { throw new Error("Bad Server Response"); }
     return result.text();
