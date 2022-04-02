@@ -998,24 +998,6 @@
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
-function submitForm() {
-  const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
-    method: 'POST',
-    headers: {
-        'Authorization': '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',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({"personalizations": [{"to": [{"email": "lee@thepaynetrain.com"}]}],"from": {"email": "lee@thepaynetrain.com"},"subject": "Hello, World!","content": [{"type": "text/plain", "value": "Heya!"}]})
-});
-if (!response.ok) {
-    const message = 'Error with Status Code: ' + response.status;
-    throw new Error(message);
-  }
-  const data = await response.json();
-  console.log(data);
-
-  const message = document.getElementById('form-message').value
-}
                   </script>
                   </div>
                 </div>
