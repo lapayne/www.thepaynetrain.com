@@ -5,7 +5,7 @@ module.exports = function (context, input) {
         subject: "contact form",
         content: [{
             type: 'text/plain',
-            value: input
+            value: "test message"
         }]
     };
 
