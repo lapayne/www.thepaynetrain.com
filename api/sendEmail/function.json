@@ -9,8 +9,7 @@
         "post"
       ]
     },
-    {
-        "bindings": [
+    
             {
                 "name": "$return",
                 "type": "sendGrid",
@@ -20,7 +19,6 @@
                 "from": "contact@thepaynetrain.com",
                 "subject": "Contact form from paynetrain"
             }
-        ]
-    }
+        
   ]
 }
