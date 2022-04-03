@@ -16,6 +16,11 @@
                 "to": "lapayne@gmail.com",
                 "from": "contact@thepaynetrain.com",
                 "subject": "Contact form from paynetrain"
+            },
+            {
+              "name": "$return",
+              "type": "http",
+              "direction": "out"
             }
         
   ]
