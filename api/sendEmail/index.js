@@ -1,13 +1,11 @@
-module.exports = function (context, input) {
-    var message = {
-        "personalizations": [ { "to": [ { "email": "lee@thepaynetrain.com" } ] } ],
-        from: { email: "contact@thepaynetrain.com" },
-        subject: "contact form",
+
+module.exports = async function (context, req) {
+
+    context.bindings.message = {
+        subject: "Contact form - thepaynetrain",
         content: [{
             type: 'text/plain',
-            value: "test message"
+            value: req.body.form-message
         }]
     };
-
-    return message;
-};
+}
