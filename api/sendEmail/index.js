@@ -5,7 +5,7 @@ module.exports = async function (context, req) {
         subject: 'Contact form - thepaynetrain',
         content: [{
             type: 'text/plain',
-            value: req.body.form-message
+            value: "test body"
         }]
     };
 }
