@@ -17,7 +17,7 @@
                 "type": "sendGrid",
                 "direction": "out",
                 "apiKey" : "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",
-                "to": "lee@thepaynetrain.com",
+                "to": "lapayne@gmail.com",
                 "from": "contact@thepaynetrain.com",
                 "subject": "Contact form from paynetrain"
             }
