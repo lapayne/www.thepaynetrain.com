@@ -1,27 +1,29 @@
 {
   "bindings": [
     {
-      "authLevel": "anonymous",
+      "authLevel": "function",
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["post"]
+      "methods": [
+        "get",
+        "post"
+      ]
     },
-    
-            {
-                "name": "message",
-                "type": "sendGrid",
-                "direction": "out",
-                "apiKey" : "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",
-                "to": "lapayne@gmail.com",
-                "from": "contact@thepaynetrain.com",
-                "subject": "Contact form from paynetrain"
-            },
-            {
-              "name": "$return",
-              "type": "http",
-              "direction": "out"
-            }
-        
+    {
+      "name": "message",
+      "ApiKey": "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",
+      "to": "lapayne@gmail.com",
+      "from": "contact@thepaynetrain.com",
+      "subject": "Test from azure",
+      "text": "Testing",
+      "direction": "out",
+      "type": "sendGrid"
+    },
+    {
+      "name": "res",
+      "direction": "out",
+      "type": "http"
+    }
   ]
 }
