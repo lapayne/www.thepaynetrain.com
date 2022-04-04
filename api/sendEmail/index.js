@@ -8,5 +8,7 @@ module.exports = async function (context, req) {
             value: "test body"
         }]
     };
-    context.res = {body: {text: "works"},};
+    context.res = {
+        body: {text: "works"},
+        };
 }
