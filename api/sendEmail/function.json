@@ -1,21 +1,21 @@
 {
   "bindings": [
     {
-      "authLevel": "anonymous",
-      "type": "httpTrigger",
-      "direction": "in",
       "name": "req",
+      "authLevel": "anonymous",
       "methods": [
         "get",
         "post"
-      ]
+      ],
+      "direction": "in",
+      "type": "httpTrigger"
     },
     {
+      "connection": "thepaynetrain-com-servicebus_RootManageSharedAccessKey_SERVICEBUS",
       "name": "sbMessage",
+      "queueName": "emails",
       "direction": "out",
-      "type": "serviceBus",
-      "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zbzANCV/1TZykCULyokrn55lFkAgCRkjee5VSQDuUCg=",
-      "queueName": "emails"
+      "type": "serviceBus"
     }
   ]
 }
