@@ -13,7 +13,7 @@
     {
       "name": "message",
       "direction": "out",
-      "type": "serviceBusTrigger",
+      "type": "serviceBus",
       "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=SendMessage;SharedAccessKey=UDaxRQ0hty9YnfJ/GoJm9/XTIQHGK6Ap40f0H5QGiC8=",
       "queueName": "emails"
     }
