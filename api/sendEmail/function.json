@@ -14,7 +14,7 @@
       "name": "sbMessage",
       "direction": "out",
       "type": "serviceBus",
-      "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=SendMessage;SharedAccessKey=UDaxRQ0hty9YnfJ/GoJm9/XTIQHGK6Ap40f0H5QGiC8=",
+      "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zbzANCV/1TZykCULyokrn55lFkAgCRkjee5VSQDuUCg=",
       "queueName": "emails"
     }
   ]
