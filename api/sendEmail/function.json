@@ -11,7 +11,7 @@
       "type": "httpTrigger"
     },
     {
-      "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=SendMessage;SharedAccessKey=GuAqXQeZ4ku8nfHjRPIxmsA6KzEF24Tp34JlOqVt6M0=",
+      "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zbzANCV/1TZykCULyokrn55lFkAgCRkjee5VSQDuUCg=",
       "name": "sbMessage",
       "queueName": "emails",
       "direction": "out",
