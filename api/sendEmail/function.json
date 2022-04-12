@@ -1,14 +1,15 @@
 {
   "bindings": [
     {
-      "name": "req",
       "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
       "methods": [
         "get",
         "post"
       ],
-      "direction": "in",
-      "type": "httpTrigger"
+      "route": "sendEmail"
     },
     {
       "connection": "Endpoint=sb://thepaynetrain-com-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zbzANCV/1TZykCULyokrn55lFkAgCRkjee5VSQDuUCg=",
