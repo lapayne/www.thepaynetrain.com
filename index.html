@@ -978,12 +978,11 @@
         <div class="row">
           <div class="col-md-9">
             <div class="card mb-0" data-aos="zoom-in">
-              <!--
               <div class="h4 text-center title">Contact Me</div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <form onsubmit="return sendMail()">
+                    <form action="/api/sendEmail" method="post">
                       Message: <br />
                       <textarea id="form-message" name="form-message" rows="10" cols="40" title="message"></textarea><br />
                       <input type="submit" value="Submit" class="btn btn-primary smooth-scroll mr-2">
@@ -994,7 +993,7 @@
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
