@@ -17,6 +17,12 @@
       "queueName": "emails",
       "connection": "emailSB",
       "direction": "out"
+  },
+  {
+    "name": "res",
+    "type": "http",
+    "direction": "out"
+
   }
   ]
 }
