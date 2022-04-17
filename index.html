@@ -87,6 +87,7 @@
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
             <div class="h4 mt-0 title">About</div>
+            <p id="welcomename" name="welcomename"></p>
             <p>Hello! I am Lee Payne, an experienced technology manager with experiences across the entire technology stack.</p>
             <p>I am an experienced technology leader with experience across the entire technology stack including Windows systems, networking, information security, devops and strategic technology leadership. I am looking for a position which can utilise this broad experience to its fullest. My experience as an operational manager has provided opportunities to develop a detail orientated team culture while still seeing the overall team objectives are fulfilled, I have developed and implemented change initiatives to increase the reliability of the technology stack for our business customers.</p>
           <p id="quote"></p>
@@ -1004,7 +1005,7 @@
 <script>
   function setName(){
     if(getUrlParameter("name").length > 0){
-    document.getElementById("welcomename").innerHTML= "Welcome " +getUrlParameter("name") ;
+    document.getElementById("welcomename").innerHTML= getUrlParameter("name") ;
   }
 }
 
@@ -1083,17 +1084,6 @@ return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' ')
 
   document.getElementById("quote").innerHTML = " <div class='h4 mt-0 title'>Quote of the day:</div><br>" + quotearray[Math.floor(Math.random() * quotearray.length-2)];
 });
-
-function sendMail(){
-const object = { message: 'James Gordon' };
-const response = await fetch('/api/sendEmail', {
-  method: 'POST',
-  body: JSON.stringify(object),
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-}
 </script>
   </body>
 </html>
