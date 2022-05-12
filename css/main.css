@@ -5284,3 +5284,6 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+.hyperlink {
+    color:rgba(255, 255, 255, 0.8);}
