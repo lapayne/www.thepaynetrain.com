@@ -12,7 +12,7 @@ resources:
 steps:
   - checkout: self
     submodules: true 
-  - checkout: scripts
+  - checkout: terraform
     submodules: true
 
   - task: TerraformInstaller@0
