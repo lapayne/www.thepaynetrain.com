@@ -6,9 +6,9 @@ pool:
 
 resources:
   repositories:
-  - repository: Terraform
+  - repository: terraform
     type: git
-    name: terraform
+    name: scripts/Terraform
 steps:
   - checkout: self
     submodules: true 
