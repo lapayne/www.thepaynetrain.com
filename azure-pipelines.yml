@@ -23,7 +23,7 @@ steps:
     inputs:
      provider: 'azurerm'
      command: 'init'
-     workingDirectory: '/home/vsts/work/1/s/scripts/sites/thepaynetrain.com/www'
+     workingDirectory: '/home/vsts/work/1/s/sites/thepaynetrain.com/www'
      backendServiceArm: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
      backendAzureRmResourceGroupName: 'thepaynetrain-com-rg'
      backendAzureRmStorageAccountName: 'thepaynetrainsa'
