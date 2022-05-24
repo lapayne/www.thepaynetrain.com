@@ -1,5 +1,5 @@
 module.exports = async function (context, req) {
-    context.bindings.outputSbQueue = req.body;
+    context.bindings.outputSbQueue = req.body.form-message;
     context.bindings.res = {
         status: 302,
         headers: {
