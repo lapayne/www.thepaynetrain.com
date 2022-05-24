@@ -1,7 +1,7 @@
-FROM nginx:latest
+FROM httpd:alpine
 
 LABEL maintainer="Lee Payne"
 
-COPY / /usr/share/nginx/html
+COPY / /usr/local/apache2/htdocs/
 
 EXPOSE 80
