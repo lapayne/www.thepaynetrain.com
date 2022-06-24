@@ -7,14 +7,26 @@
     "azureFunctions.preDeployTask": "npm prune (functions)",
     "cSpell.words": [
         "Apim",
+        "badass",
+        "BJSS",
         "bodytxt",
         "Dataocr",
         "endpointsuffix",
+        "Fargate",
         "fileocr",
+        "Fulgrim",
+        "Hogfather",
         "ingestionendpoint",
         "keyocr",
+        "Kimball",
+        "Lorax",
+        "Lupercal",
         "minidives",
+        "Noonan",
         "ocrerr",
+        "Paarthurnax",
+        "quotearray",
+        "Ratcatcher",
         "resocr",
         "sbadderr",
         "sbaddmessage",
@@ -24,6 +36,9 @@
         "sbgetmessage",
         "sbgetres",
         "sbgetsubmit",
-        "submitocr"
+        "submitocr",
+        "Torgue",
+        "Vulkan",
+        "WEATHERWAX"
     ]
 }
