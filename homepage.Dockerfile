@@ -1,7 +1,12 @@
-FROM httpd:alpine
+FROM alpine:3.16.0
 
 LABEL maintainer="Lee Payne"
 
-COPY / /usr/local/apache2/htdocs/
+RUN apk add --update nginx && rm -rf /var/cache/apk/*
+RUN adduser -D -g 'www' www
 
-EXPOSE 80
+RUN mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www
+
+COPY / /www
+
+EXPOSE 8080
