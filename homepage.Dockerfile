@@ -8,6 +8,7 @@ RUN adduser -D -g 'www' www
 RUN mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www
 
 COPY / /www
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
 CMD ["nginx"]
