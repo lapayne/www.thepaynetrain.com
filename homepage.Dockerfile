@@ -10,3 +10,4 @@ RUN mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www
 COPY / /www
 
 EXPOSE 8080
+CMD ["nginx"]
