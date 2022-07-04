@@ -56,3 +56,6 @@ steps:
       repository: 'lapayne82/homepage'
       command: 'buildAndPush'
       Dockerfile: '**/homepage.Dockerfile'
+      tags: |
+        $(Build.BuildId)
+        latest
