@@ -1,6 +1,6 @@
 module.exports = async function (context, req) {
     
-    fetch(window.location.origin + "/quotes")
+    fetch("https://www.thepaynetrain.com/quotes")
     .then(response => response.body)
   .then(rb => {
     const reader = rb.getReader();
