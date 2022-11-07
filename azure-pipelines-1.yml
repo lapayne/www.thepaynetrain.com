@@ -21,3 +21,6 @@ steps:
     repository: 'www-thepaynetrain-com/www-thepaynetrain-com'
     command: 'buildAndPush'
     Dockerfile: '**/homepage.Dockerfile'
+    tags: |
+      latest
+      $(Build.BuildId)
