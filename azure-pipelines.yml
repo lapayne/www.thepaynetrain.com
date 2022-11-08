@@ -19,18 +19,18 @@ steps:
     inputs:
      terraformVersion: '1.3.4'
 
-  - task: TerraformTaskV3@4
+  - task: TerraformTaskV2@2
     inputs:
      provider: 'azurerm'
      command: 'init'
-     workingDirectory: '$(System.DefaultWorkingDirectory)Terraform/sites/thepaynetrain.com/www/azure'
+     workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/sites/thepaynetrain.com/www/azure'
      backendServiceArm: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
      backendAzureRmResourceGroupName: 'thepaynetrain-com-rg'
      backendAzureRmStorageAccountName: 'thepaynetrainsa'
      backendAzureRmContainerName: 'terraform'
      backendAzureRmKey: 'www-thepaynetrain-com.prod.terraform.tfstate'
   
-  - task: TerraformTaskV3@5
+  - task: TerraformTaskV2@3
     inputs:
       provider: 'azurerm'
       command: 'apply'
