@@ -18,7 +18,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'GCP docker www.thepaynetrain.com'
-    repository: 'www-thepaynetrain-com/www-thepaynetrain-com'
+    repository: 'www-thepaynetrain-com/www-thepaynetrain-com/hompage'
     command: 'buildAndPush'
     Dockerfile: '**/homepage.Dockerfile'
     tags: |
