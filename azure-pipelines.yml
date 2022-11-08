@@ -71,12 +71,12 @@ steps:
      backendAzureRmContainerName: 'terraform'
      backendAzureRmKey: 'www-thepaynetrain-com.gcp.prod.terraform.tfstate'
   
-  - task: TerraformTaskV2@2
+  - task: TerraformTaskV3@3
     inputs:
-      provider: 'azurerm'
+      provider: 'gcp'
       command: 'apply'
-      workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www/gcp'
-      environmentServiceNameAzureRM: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/sites/thepaynetrain.com/www/gcp'
+      environmentServiceNameGCP: 'GCP Terraform'
   - task: Docker@2
     inputs:
       containerRegistry: 'GCP docker www.thepaynetrain.com'
@@ -91,3 +91,4 @@ steps:
       tags: |
         latest
         $(Build.BuildId)
+  
