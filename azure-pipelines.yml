@@ -41,7 +41,7 @@ steps:
       app_location: '/'
       api_location: 'api'
       output_location: ''
-      workingDirectory: '/home/vsts/work/1/s/www.thepaynetrain.com'
+      workingDirectory: '/home/vsts/work/1/s/www.thepaynetrain.com/azure'
       azure_static_web_apps_api_token: $(www-thepaynetrain-com-ds)
 
   - task: AzureKeyVault@2
@@ -59,3 +59,18 @@ steps:
       tags: |
         $(Build.BuildId)
         latest
+
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'GCP docker www.thepaynetrain.com'
+      command: 'login'
+
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'GCP docker www.thepaynetrain.com'
+      repository: 'www-thepaynetrain-com/www-thepaynetrain-com/hompage'
+      command: 'buildAndPush'
+      Dockerfile: '**/homepage.Dockerfile'
+      tags: |
+        latest
+        $(Build.BuildId)
