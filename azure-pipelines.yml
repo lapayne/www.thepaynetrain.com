@@ -60,6 +60,23 @@ steps:
         $(Build.BuildId)
         latest
 
+  - task: TerraformTaskV2@2
+    inputs:
+     provider: 'azurerm'
+     command: 'init'
+     workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www/gcp'
+     backendServiceArm: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
+     backendAzureRmResourceGroupName: 'thepaynetrain-com-rg'
+     backendAzureRmStorageAccountName: 'thepaynetrainsa'
+     backendAzureRmContainerName: 'terraform'
+     backendAzureRmKey: 'www-thepaynetrain-com.gcp.prod.terraform.tfstate'
+  
+  - task: TerraformTaskV2@2
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www/gcp'
+      environmentServiceNameAzureRM: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
   - task: Docker@2
     inputs:
       containerRegistry: 'GCP docker www.thepaynetrain.com'
@@ -68,7 +85,7 @@ steps:
   - task: Docker@2
     inputs:
       containerRegistry: 'GCP docker www.thepaynetrain.com'
-      repository: 'www-thepaynetrain-com/www-thepaynetrain-com/hompage'
+      repository: 'www-thepaynetrain-com/www-thepaynetrain-com/homepage'
       command: 'buildAndPush'
       Dockerfile: '**/homepage.Dockerfile'
       tags: |
