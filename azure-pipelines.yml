@@ -23,7 +23,7 @@ steps:
     inputs:
      provider: 'azurerm'
      command: 'init'
-     workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www'
+     workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www/azure'
      backendServiceArm: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
      backendAzureRmResourceGroupName: 'thepaynetrain-com-rg'
      backendAzureRmStorageAccountName: 'thepaynetrainsa'
@@ -34,14 +34,14 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'apply'
-      workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www'
+      workingDirectory: '/home/vsts/work/1/s/Terraform/sites/thepaynetrain.com/www/azure'
       environmentServiceNameAzureRM: 'Production Service(3f6d29b1-08f7-4d8b-a298-8ea97dd77eda)'
   - task: AzureStaticWebApp@0
     inputs:
       app_location: '/'
       api_location: 'api'
       output_location: ''
-      workingDirectory: '/home/vsts/work/1/s/www.thepaynetrain.com/azure'
+      workingDirectory: '/home/vsts/work/1/s/www.thepaynetrain.com/'
       azure_static_web_apps_api_token: $(www-thepaynetrain-com-ds)
 
   - task: AzureKeyVault@2
