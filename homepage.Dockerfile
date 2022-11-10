@@ -1,14 +1,13 @@
-FROM alpine:3.16.2
+FROM busybox:1.35
 
-LABEL maintainer="Lee Payne"
+# Create a non-root user to own the files and run our server
+RUN adduser -D static
+USER static
+WORKDIR /home/static
 
-RUN apk add --update nginx && rm -rf /var/cache/apk/*
-RUN adduser -D -g 'www' www
+# Copy the static website
+# Use the .dockerignore file to control what ends up inside the image!
+COPY / .
 
-RUN mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www
-
-COPY / /www
-COPY nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 8080
-CMD ["nginx"]
+# Run BusyBox httpd
+CMD ["busybox", "httpd", "-f", "-v", "-p", "8080"]
