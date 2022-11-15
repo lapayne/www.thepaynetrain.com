@@ -2,5 +2,14 @@
     <head><title>Admin Page</title></head>
     <body>
         <h1>This is an admin page.</h1>
+        <p id="userdata" onload(getUserInfo)></p>
+<script>
+        async function getUserInfo() {
+            const response = await fetch('/.auth/me');
+            const payload = await response.json();
+            const { clientPrincipal } = payload;
+            return clientPrincipal;
+          }
+</script>
     </body>
 </html>
