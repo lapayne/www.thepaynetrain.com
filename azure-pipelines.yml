@@ -52,7 +52,12 @@ steps:
     inputs:
       containerRegistry: 'GCP docker www.thepaynetrain.com'
       command: 'login'
-
+  - task: TerraformTaskV3@3
+    inputs:
+      provider: 'gcp'
+      command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/sites/thepaynetrain.com/www/gcp'
+      environmentServiceNameGCP: 'GCP Terraform'
   - task: Docker@2
     inputs:
       containerRegistry: 'GCP docker www.thepaynetrain.com'
@@ -63,12 +68,7 @@ steps:
         latest
         $(Build.BuildId)
 
-  - task: TerraformTaskV3@3
-    inputs:
-      provider: 'gcp'
-      command: 'apply'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/sites/thepaynetrain.com/www/gcp'
-      environmentServiceNameGCP: 'GCP Terraform'
+
 
   
   - task: AzureKeyVault@2
