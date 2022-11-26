@@ -9,7 +9,7 @@
             const payload = await response.json();
             const { clientPrincipal } = payload;
             //return clientPrincipal;
-            return ${bearer_token}
+            return process.env.bearer_token
           }
 </script>
     </body>
