@@ -3,7 +3,7 @@
   "configurations": {
     "www.thepaynetrain.com": {
       "appLocation": ".",
-      "apiLocation": "oldapi",
+      "apiLocation": "api",
       "outputLocation": ".",
       "apiBuildCommand": "npm run build --if-present"
     }
