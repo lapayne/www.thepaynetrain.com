@@ -1,21 +1,12 @@
 module.exports = async function (context, req) {
     
-  var fs = require('fs');
-  var path = require('path');
+  const fs = require('fs');
+  const path = context.executionContext.functionDirectory + '/quotes.txt';
+  fs.readFileSync(path, 'utf-8', function(err, data){
+      if (err) {
+        context.res.body = err;
+      }
+      context.res.body = path;
+  });
 
-      var baseDir = __dirname;
-      var defaultFile = path.join(baseDir, 'quotes');
-      fs.readFile(defaultFile, 'utf8', function (err, data) {
-        
-        
-                // Display the file content
-                context.res.body = data.toString();
-    });
-      
-
-
-  
-          
-
-      
   }
