@@ -34,7 +34,7 @@
       appInsights.trackPageView();
 	  </script>
   </head>
-  <body id="top" onload="setName()">
+  <body id="top" onload="loadContent()">
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -87,7 +87,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title">About</div>
+            <div class="h4 mt-0 title" id="aboutcontent">About</div>
             
             <p>Hello! I am Lee Payne, an experienced technology manager with experiences across the entire technology stack.</p>
             <p>I am an experienced technology leader with experience across the entire technology stack including Windows systems, networking, information security, devops and strategic technology leadership. I am looking for a position which can utilize this broad experience to its fullest. My experience as an operational manager has provided opportunities to develop a detail orientated team culture while still seeing the overall team objectives are fulfilled, I have developed and implemented change initiatives to increase the reliability of the technology stack for our business customers.</p>
@@ -505,13 +505,15 @@
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
             <div class="h5">Managed Services Engineering Lead</div>
-            <p>                            Key Responsibilities:
+            <p>Key Responsibilities:
               <ul>
-
+                  <li>Responsible for all managed services engineers within BJSS (45 engineers)</li>
+                  <li>Responsible for aiding in the resourcing of engineers on engagements</li>
               </ul>
                   Major Successes:
                   <ul>
-
+                    <li>Implemented a robust career development strategy</li>
+                    <li>Implemented a progression strategy for the engineers</li>
                 </ul>
           </div>
         </div>
@@ -1162,5 +1164,6 @@ return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' ')
   document.getElementById("quote").innerHTML = " <div class='h4 mt-0 title'>Quote of the day:</div><br>" + quotearray[Math.floor(Math.random() * quotearray.length-2)];
 });
 </script>
+
   </body>
 </html>
