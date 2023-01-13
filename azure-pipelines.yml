@@ -53,12 +53,12 @@ steps:
       containerRegistry: 'GCP docker www.thepaynetrain.com'
       command: 'login'
 
-  - task: Docker@2
-    inputs:
-      containerRegistry: 'GCP docker www.thepaynetrain.com'
-      repository: 'paynefamilyshared/paynefamilyshared/homepage'
-      command: 'buildAndPush'
-      Dockerfile: '**/homepage.Dockerfile'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'paynefamilyshared-docker'
+    repository: 'paynefamilyshared/paynefamilyshared/www-paddockbar-co-uk'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
       tags: |
         latest
         $(Build.BuildId)
