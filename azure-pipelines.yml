@@ -48,20 +48,15 @@ steps:
      backendAzureRmContainerName: 'terraform'
      backendAzureRmKey: 'www-thepaynetrain-com.gcp.prod.terraform.tfstate'
   
-  - task: Docker@2
-    inputs:
-      containerRegistry: 'GCP docker www.thepaynetrain.com'
-      command: 'login'
-
 - task: Docker@2
   inputs:
-    containerRegistry: 'paynefamilyshared-docker'
-    repository: 'paynefamilyshared/paynefamilyshared/www-paddockbar-co-uk'
+    containerRegistry: 'GCP docker www.thepaynetrain.com'
+    repository: 'paynefamilyshared/paynefamilyshared/homepage'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: |
-        latest
-        $(Build.BuildId)
+      $(Build.BuildId)
+      latest
 
 
 
