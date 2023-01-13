@@ -59,7 +59,7 @@ steps:
     repository: 'paynefamilyshared/paynefamilyshared/www-paddockbar-co-uk'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-      tags: |
+    tags: |
         latest
         $(Build.BuildId)
 
