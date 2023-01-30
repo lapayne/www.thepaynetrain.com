@@ -1,7 +1,9 @@
 /api/
 /.vscode
+.vscode
 *.Dockerfile
 .gitignore
+/.git
 # Logs
 logs
 *.log
