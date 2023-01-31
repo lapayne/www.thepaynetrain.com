@@ -1,5 +1,5 @@
 #source for the base image
-FROM busybox:1.35
+FROM busybox:1.36.0
 
 #ENV variable for use when the site is running or during build
 ENV SITE_VERSION 1.1.2
