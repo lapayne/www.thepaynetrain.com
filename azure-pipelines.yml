@@ -12,19 +12,22 @@ resources:
 steps:
   - checkout: self
     submodules: true 
+    fetchDepth: 0
   - checkout: terraform
     submodules: true
 
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'SonarCloud'
-    organization: 'lapayne'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'lapayne_www.thepaynetrain.com'
-    cliProjectName: 'www.thepaynetrain.com'
-    cliSources: '.'
+  - task: SonarCloudPrepare@1
+    inputs:
+      SonarCloud: 'SonarCloud'
+      organization: 'lapayne'
+      scannerMode: 'CLI'
+      configMode: 'manual'
+      cliProjectKey: 'lapayne_www.thepaynetrain.com'
+      cliProjectName: 'www.thepaynetrain.com'
+      cliSources: '.'
+
   - task: SonarCloudAnalyze@1
+
   - task: SonarCloudPublish@1
     inputs:
       pollingTimeoutSec: '300'
