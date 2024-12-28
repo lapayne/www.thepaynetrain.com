@@ -52,7 +52,7 @@ const Hero = () => {
             className="rounded-full w-80 h-80 border-2 border-white-100 mb-5"
           />
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Akash Jana
+           Lee Payne
           </h2>
           <TypewriterEffect
             className="text-center md:text-5xl lg:text-6xl my-5"
