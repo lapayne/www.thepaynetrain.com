@@ -7,7 +7,6 @@ export const navItems = [
     name: "Resume",
     link: "/cv.pdf",
   },
- 
 ];
 
 export const socialMedia = [
@@ -38,9 +37,10 @@ export const projects = [
   },
   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80",
-    href: "maps.maxpayne.vip",
-    description: "A map of everywhere our family has",
+    img: "/worldmap.jpg",
+    href: "https://maps.maxpayne.vip",
+    description:
+      "A map of everywhere our family has been, a reminder of what we've done.",
     name: "Maps",
   },
-]
+];
