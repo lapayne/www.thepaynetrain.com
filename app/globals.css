@@ -111,3 +111,16 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns of equal width */
+  grid-gap: 20px; /* Add spacing between grid items */
+}
+
+.item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
