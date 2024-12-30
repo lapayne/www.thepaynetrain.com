@@ -79,7 +79,7 @@ export const TypewriterEffect = ({
       {renderWords()}
       <motion.span
         initial={{
-          opacity: 1,
+          opacity: 0,
         }}
         animate={{
           opacity: 1,
@@ -90,7 +90,7 @@ export const TypewriterEffect = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "inline-block rounded-sm w-[4px] h-4 md:h-8 lg:h-12 bg-purple",
+          "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-blue-500",
           cursorClassName
         )}
       ></motion.span>
@@ -150,7 +150,7 @@ export const TypewriterEffectSmooth = ({
           width: "fit-content",
         }}
         transition={{
-          duration: 3,
+          duration: 2,
           ease: "linear",
           delay: 1,
         }}
@@ -164,6 +164,24 @@ export const TypewriterEffectSmooth = ({
           {renderWords()}{" "}
         </div>{" "}
       </motion.div>
+      <motion.span
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.8,
+
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className={cn(
+          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
+          cursorClassName
+        )}
+      ></motion.span>
     </div>
   );
 };
