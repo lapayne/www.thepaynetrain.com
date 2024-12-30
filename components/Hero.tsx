@@ -2,7 +2,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TypewriterEffect } from "./ui/TypewriterEffect";
+import { TypewriterEffectSmooth } from "./ui/TypewriterEffect";
 
 const Hero = () => {
   const words = [
@@ -54,7 +54,7 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
            Lee Payne
           </h2>
-          <TypewriterEffect
+          <TypewriterEffectSmooth
             className="text-center md:text-5xl lg:text-6xl my-5"
             words={words}
           />
