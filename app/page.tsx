@@ -6,6 +6,8 @@ import { navItems } from "@/data";
 import Quotes from "@/components/Quotes";
 import Education from "@/components/Education";
 import Work from "@/components/work";
+import Projects from "@/components/Projects"
+
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
         <Work />
         <Education />
         <Skills />
+      <Projects />
         <Footer />
       </div>
     </main>
