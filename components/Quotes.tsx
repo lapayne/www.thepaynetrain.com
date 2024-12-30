@@ -1,5 +1,4 @@
 "use client";
-import CardSpotlight from "@/components/ui/card-spotlight";
 import { useEffect, useState } from "react";
 
 const Quotes = () => {
