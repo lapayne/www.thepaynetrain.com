@@ -20,7 +20,6 @@ const Projects = () => {
               <p className="font-normal text-base text-gray-50 relative z-10">
                 {name}
               </p>
-              <p className="text-sm text-gray-400">2 min read</p>
             </div>
           </div>
           <a href={href}>
