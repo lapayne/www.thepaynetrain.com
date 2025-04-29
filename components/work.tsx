@@ -8,9 +8,9 @@ export default function Work() {
       date: "Dec 24 - Present",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Managed Services Practice Engineering Lead</b>
-          </p>
+          </div>
           <br />
         </div>
       ),
@@ -20,9 +20,9 @@ export default function Work() {
       date: "Aug 22 - Dec 24",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Managed Services Engineering Lead</b>
-          </p>
+          </div>
           <br />
 
           <ul className="list-disc pl-4 space-y-2">
@@ -57,9 +57,9 @@ export default function Work() {
       date: " Sep 21 - Aug 22",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Engineering Manager</b>
-          </p>
+          </div>
           <br />
           <ul className="list-disc pl-4 space-y-2">
             <li>
@@ -102,10 +102,10 @@ export default function Work() {
       date:  "Jul 19 - Sep 21",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Web Environments Manager</b>
             <br />
-          </p>
+          </div>
           <ul className="list-disc pl-4 space-y-2">
             <li>
               Managing seven engineers including appraisals and performance
@@ -151,10 +151,10 @@ export default function Work() {
       date: "Mar 18 – Jul 19",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Server, Storage, Data Centre and Open Systems Manger</b>
             <br />
-          </p>
+          </div>
           <ul className="list-disc pl-4 space-y-2">
             <li>Managing vendor relationships</li>
             <li> Assisting with CAPEX/OPEX requirements for the business</li>
@@ -211,10 +211,10 @@ export default function Work() {
       date: "Mar 16 - Mar 18",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Network & Voice Manager</b>
             <br />
-          </p>
+          </div>
           <ul className="list-disc pl-4 space-y-2">
             <li>Managing vendor relationships</li>
             <li>Assisting with CAPEX/OPEX requirement for the business</li>
@@ -280,9 +280,9 @@ export default function Work() {
       date: "Jul 13-Mar 16",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Network Engineer</b>
-          </p>
+          </div>
           <br />
           <ul className="list-disc pl-4 space-y-2"></ul>
         </div>
@@ -293,9 +293,9 @@ export default function Work() {
       date: "Mar 06 – Jun 13",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Server Support Engineer</b>
-          </p>
+          </div>
           <br />
           <ul className="list-disc pl-4 space-y-2"></ul>
         </div>
@@ -306,9 +306,9 @@ export default function Work() {
       date: "Jul 04 – Mar 06",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Desktop/Server Support Engineer</b>
-          </p>
+          </div>
           <br />
           <ul className="list-disc pl-4 space-y-2"></ul>
         </div>

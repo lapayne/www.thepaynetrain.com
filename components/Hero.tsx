@@ -51,25 +51,19 @@ const Hero = () => {
             alt="profile-pic"
             className="rounded-full w-80 h-80 border-2 border-white-100 mb-5"
           />
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          <h2 className="uppercase tracking-widest text-4xl text-center text-blue-100 max-w-80">
            Lee Payne
           </h2>
           <TypewriterEffectSmooth
             className="text-center md:text-5xl lg:text-6xl my-5"
             words={words}
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Lee, an experienced manager in building high
             performance teams and operational excellence.
-          </p>
+          </div>
 
-          <a href="#projects" className="cursor-pointer">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+
         </div>
       </div>
     </div>

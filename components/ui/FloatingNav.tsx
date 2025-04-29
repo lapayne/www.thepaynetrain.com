@@ -9,7 +9,7 @@ import {
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-
+import MagicButton from "../ui/MagicButton";
 export const FloatingNav = ({
   navItems,
   className,
@@ -62,7 +62,8 @@ export const FloatingNav = ({
         )}
       >
         {navItems.map((navItem: any, idx: number) => (
-          <Link
+        
+        <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
@@ -72,6 +73,8 @@ export const FloatingNav = ({
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
+          
+
         ))}
       </motion.div>
     </AnimatePresence>

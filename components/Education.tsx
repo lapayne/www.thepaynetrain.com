@@ -8,12 +8,12 @@ export default function Education() {
       date: "2013 - 2015",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             Masters Of Business Administration (Technology Management)
-          </p>
-          <p className="text-lg">Modules:</p>
+          </div>
+          <div className="text-lg">Modules:</div>
           <br />
-          <p className="block text-sm">
+          <div className="block text-sm">
          
             MBA Stage 1<br />
             <br /> Managing Technological Innovation
@@ -27,7 +27,7 @@ export default function Education() {
             <br /> Project Management
             <br />
             <br /> The Management Initiative (Capstone Project)
-            </p>
+            </div>
         </div>
       ),
     },
@@ -36,14 +36,14 @@ export default function Education() {
       date: "2015 - 2016",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             Postgraduate Certificate Technology Management
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          <p className="text-lg">Modules:</p>
+          </div>
+          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <div className="text-lg">Modules:</div>
             <br />
 
-            <p className="block text-sm">
+            <div className="block text-sm">
               Exploring management
               <br />
               <br /> Managing people and organizations
@@ -55,9 +55,9 @@ export default function Education() {
               <br /> Operational management
               <br />
               <br /> Evidence Based Initiative
-            </p>
+            </div>
   
-          </p>
+          </div>
         </div>
       ),
     },
@@ -66,11 +66,11 @@ export default function Education() {
       date: "2014",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
             Level 5 Diploma - leadership and management
-          </p>
-          <p className="text-lg">Modules: </p>< br/>
-          <p className="block text-sm">
+          </div>
+          <div className="text-lg">Modules: </div>< br/>
+          <div className="block text-sm">
             Being a Leader
             <br />
             <br /> Description: This unit has been designed for learners who
@@ -177,7 +177,7 @@ export default function Education() {
             <br /> Know how to set and manage budgets <br />
             <br />
             <br />
-          </p>
+          </div>
         </div>
       ),
     },
@@ -186,15 +186,15 @@ export default function Education() {
       date: "2005",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             Certificate in Business management
-          </p>
-          <p className="block text-sm">
+          </div>
+          <div className="block text-sm">
             This course covered the major aspects of first line management
             including hiring, performance management and basic budgeting, it was
             the first management course I had taken and was a good overview of
             being a front line manager.
-          </p>
+          </div>
         </div>
       ),
     },
@@ -203,11 +203,11 @@ export default function Education() {
       date: "2000-2004",
       content: (
         <div>
-          <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             BSc(Hons) Computer Science
-          </p>
-          <p className="text-lg">Modules: </p>< br/>
-          <p className="block text-sm">
+          </div>
+          <div className="text-lg">Modules: </div>< br/>
+          <div className="block text-sm">
             Analytical modelling
             <br /> score: 48
             <br />
@@ -358,7 +358,7 @@ export default function Education() {
             Description: This module was Focused on web technologies and
             involved writing a fully functioning website for a company using
             HTML, perl and the UNIX rdb database. <br />
-          </p>
+          </div>
         </div>
       ),
     },
