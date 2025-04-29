@@ -37,15 +37,15 @@
     ::selection {
       background: none;
     }
-    
+
     ::-webkit-scrollbar {
-      width: .3rem;
+      width: 0.3rem;
     }
-    
+
     ::-webkit-scrollbar-track {
       background: none;
     }
-    
+
     ::-webkit-scrollbar-thumb {
       background: #cbacf9;
       border-radius: 3rem;
@@ -123,4 +123,14 @@
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
 }

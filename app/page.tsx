@@ -6,8 +6,8 @@ import { navItems } from "@/data";
 import Quotes from "@/components/Quotes";
 import Education from "@/components/Education";
 import Work from "@/components/work";
-import Projects from "@/components/Projects"
-
+import Projects from "@/components/Projects";
+import Certs from "@/components/Certs";
 
 export default function Home() {
   return (
@@ -17,6 +17,9 @@ export default function Home() {
         <Hero />
         <Quotes />
         <Skills />
+
+        <Certs />
+
         <Work />
         <Education />
         <Projects />
