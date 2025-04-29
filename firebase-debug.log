@@ -1,0 +1,86 @@
+[debug] [2025-04-29T15:49:57.625Z] ----------------------------------------------------------------------
+[debug] [2025-04-29T15:49:57.626Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase deploy --only hosting
+[debug] [2025-04-29T15:49:57.626Z] CLI Version:   14.2.1
+[debug] [2025-04-29T15:49:57.627Z] Platform:      darwin
+[debug] [2025-04-29T15:49:57.627Z] Node Version:  v20.14.0
+[debug] [2025-04-29T15:49:57.627Z] Time:          Tue Apr 29 2025 16:49:57 GMT+0100 (British Summer Time)
+[debug] [2025-04-29T15:49:57.627Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-29T15:49:57.719Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-29T15:49:57.720Z] > authorizing via signed-in user (lapayne@gmail.com)
+[debug] [2025-04-29T15:49:57.720Z] [iam] checking project thepaynetrain-com for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-04-29T15:49:57.720Z] Checked if tokens are valid: false, expires at: 1745938395793
+[debug] [2025-04-29T15:49:57.720Z] Checked if tokens are valid: false, expires at: 1745938395793
+[debug] [2025-04-29T15:49:57.721Z] > refreshing access token with scopes: []
+[debug] [2025-04-29T15:49:57.721Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-29T15:49:57.721Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-29T15:49:57.877Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-29T15:49:57.878Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-29T15:49:57.890Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/thepaynetrain-com:testIamPermissions [none]
+[debug] [2025-04-29T15:49:57.890Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/thepaynetrain-com:testIamPermissions x-goog-quota-user=projects/thepaynetrain-com
+[debug] [2025-04-29T15:49:57.890Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/thepaynetrain-com:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-29T15:49:58.588Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/thepaynetrain-com:testIamPermissions 200
+[debug] [2025-04-29T15:49:58.588Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/thepaynetrain-com:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-29T15:49:58.589Z] Checked if tokens are valid: true, expires at: 1745945396878
+[debug] [2025-04-29T15:49:58.590Z] Checked if tokens are valid: true, expires at: 1745945396878
+[debug] [2025-04-29T15:49:58.590Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/thepaynetrain-com [none]
+[debug] [2025-04-29T15:49:59.062Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/thepaynetrain-com 200
+[debug] [2025-04-29T15:49:59.062Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/thepaynetrain-com {"projectId":"thepaynetrain-com","projectNumber":"4717102951","displayName":"thepaynetrain-com","name":"projects/thepaynetrain-com","resources":{"hostingSite":"thepaynetrain-com"},"state":"ACTIVE","etag":"1_8d610642-b196-471e-a84e-cf34bdb53fb7"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-04-29T15:50:01.776Z] Checked if tokens are valid: true, expires at: 1745945396878
+[debug] [2025-04-29T15:50:01.776Z] Checked if tokens are valid: true, expires at: 1745945396878
+[debug] [2025-04-29T15:50:01.776Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/thepaynetrain-com/sites/thepaynetrain-com [none]
+[debug] [2025-04-29T15:50:02.582Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/thepaynetrain-com/sites/thepaynetrain-com 200
+[debug] [2025-04-29T15:50:02.582Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/thepaynetrain-com/sites/thepaynetrain-com {"name":"projects/thepaynetrain-com/sites/thepaynetrain-com","defaultUrl":"https://thepaynetrain-com.web.app","appId":"1:4717102951:web:be76c18c952fd9ec9611c2","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.1
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 4.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+./components/Footer.tsx
+16:9  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+49:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/Hero.tsx
+49:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/ui/TypewriterEffect.tsx
+45:6  Warning: React Hook useEffect has a missing dependency: 'animate'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+
+[info] Failed to compile.
+
+
+[info] ./components/ui/MovingBorder.tsx:85:19
+Type error: Expected 1 arguments, but got 0.
+
+  83 |   [key: string]: any;
+  84 | }) => {
+> 85 |   const pathRef = useRef<any>();
+     |                   ^
+  86 |   const progress = useMotionValue<number>(0);
+  87 |
+  88 |   useAnimationFrame((time) => {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-04-29T15:50:12.223Z] Error: ENOENT: no such file or directory, open '/Users/lee.payne/Documents/source/personal/www.thepaynetrain.com/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
