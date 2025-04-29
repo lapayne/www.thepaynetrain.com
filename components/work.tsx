@@ -4,7 +4,8 @@ import { Timeline } from "@/components/ui/WorkTimeline";
 export default function Work() {
   const data = [
     {
-      title: "BJSS (Dec 24 - Present)",
+      title: "BJSS",
+      date: "Dec 24 - Present",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -15,7 +16,8 @@ export default function Work() {
       ),
     },
     {
-      title: "BJSS (Aug 22 - Dec 24)",
+      title: "BJSS ",
+      date: "Aug 22 - Dec 24",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -51,7 +53,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Nagra Media (Sep 21 - Aug 22)",
+      title: "Nagra Media",
+      date: " Sep 21 - Aug 22",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -95,7 +98,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Computershare (Jul 19 - Sep 21)",
+      title: "Computershare",
+      date:  "Jul 19 - Sep 21",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -143,7 +147,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Computershare (Mar 18 – Jul 19)",
+      title: "Computershare ",
+      date: "Mar 18 – Jul 19",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -202,7 +207,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Computershare (Mar 16 - Mar 18)",
+      title: "Computershare",
+      date: "Mar 16 - Mar 18",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -270,7 +276,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Computershare (Jul 13-Mar 16)",
+      title: "Computershare",
+      date: "Jul 13-Mar 16",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -282,7 +289,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Computershare (Mar 06 – Jun 13)",
+      title: "Computershare ",
+      date: "Mar 06 – Jun 13",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
@@ -294,7 +302,8 @@ export default function Work() {
       ),
     },
     {
-      title: "Kennet & N. Wilts NHS (Jul 04 – Mar 06)",
+      title: "Kennet & N. Wilts NHS",
+      date: "Jul 04 – Mar 06",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">

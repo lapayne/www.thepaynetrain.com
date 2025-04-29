@@ -4,16 +4,17 @@ import { Timeline } from "@/components/ui/Timeline";
 export default function Education() {
   const data = [
     {
-      title: "2013 - 2015",
+      title: "The Open University",
+      date: "2013 - 2015",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
-            Masters Of Business Administration (Technology Management) - The
-            Open University
+            Masters Of Business Administration (Technology Management)
           </p>
-          Modules:
+          <p className="text-lg">Modules:</p>
           <br />
-          <b>
+          <p className="block text-sm">
+         
             MBA Stage 1<br />
             <br /> Managing Technological Innovation
             <br />
@@ -26,21 +27,23 @@ export default function Education() {
             <br /> Project Management
             <br />
             <br /> The Management Initiative (Capstone Project)
-          </b>
+            </p>
         </div>
       ),
     },
     {
-      title: "2015 - 2016",
+      title: "The Open University",
+      date: "2015 - 2016",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
-            Postgraduate Certificate Technology Management - The Open University
+            Postgraduate Certificate Technology Management
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Modules:
+          <p className="text-lg">Modules:</p>
             <br />
-            <b>
+
+            <p className="block text-sm">
               Exploring management
               <br />
               <br /> Managing people and organizations
@@ -52,24 +55,23 @@ export default function Education() {
               <br /> Operational management
               <br />
               <br /> Evidence Based Initiative
-            </b>
-            <br />
-            <br />
+            </p>
+  
           </p>
         </div>
       ),
     },
     {
-      title: "2014",
+      title: "Chartered Management Institute",
+      date: "2014",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Level 5 Diploma - leadership and management - Chartered Management
-            Institute
+            Level 5 Diploma - leadership and management
           </p>
-
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            <b>Being a Leader</b>
+          <p className="text-lg">Modules: </p>< br/>
+          <p className="block text-sm">
+            Being a Leader
             <br />
             <br /> Description: This unit has been designed for learners who
             want to develop or sharpen their professional edge and enhance
@@ -79,7 +81,7 @@ export default function Education() {
             styles and approaches designed to promote a culture of mutual trust,
             respect and support. <br />
             <br />
-            <b>Learning outcomes</b>
+          Learning outcomes
             <br />
             Understand factors which impact on an organization&apos;s internal
             environment <br />
@@ -92,7 +94,7 @@ export default function Education() {
             <br />
             <br />
             <br />
-            <b>Managing Team and Individual Performance</b>
+            Managing Team and Individual Performance
             <br />
             <br /> Description: This unit evaluates the reasons for managing
             performance and the approaches that can be used. It explores methods
@@ -102,7 +104,7 @@ export default function Education() {
             management, when used effectively, is able to impact on individual
             and organizational achievement. <br />
             <br />
-            <b>Learning outcomes</b>
+            Learning outcomes
             <br />
             Understand the rationale for managing performance within
             organizations
@@ -115,7 +117,7 @@ export default function Education() {
             <br />
             <br />
             <br />
-            <b>Project Development and Control</b>
+            Project Development and Control
             <br />
             <br /> Description: This unit focuses on the knowledge and skills
             required to manage projects successfully and overcome problems and
@@ -125,7 +127,7 @@ export default function Education() {
             relationships, manage resources and risk, monitor progress and
             report on outcomes. <br />
             <br />
-            <b>Learning outcomes</b>
+            Learning outcomes
             <br />
             Understand the role of projects in delivering organizational
             strategy
@@ -138,14 +140,14 @@ export default function Education() {
             management
             <br />
             <br />
-            <br /> <b>Managing Recruitment, Selection and Induction</b>
+          Managing Recruitment, Selection and Induction
             <br />
             <br /> Description: This unit has been designed to equip learners
             with an understanding of the factors which impact on recruitment.
             They will know how to develop plans and strategies for selecting
             staff, and identify approaches for retaining the best of the best.
             <br />
-            <br /> <b>Learning outcomes</b>
+            Learning outcomes
             <br />
             Understand the factors that impact on recruitment and selection
             <br />
@@ -158,7 +160,7 @@ export default function Education() {
             <br /> Understand strategies for retaining talent
             <br />
             <br />
-            <br /> <b>Organizational Financial Management</b>
+           Organizational Financial Management
             <br />
             <br /> The aim of this unit is to enable learners to understand how
             financial systems operate within organizations. Learners will
@@ -169,7 +171,7 @@ export default function Education() {
             financial management, which will translate into improved management
             skills. <br />
             <br />
-            <b>Learning outcomes</b>
+          Learning outcomes
             <br /> Understand finance within organizations
             <br />
             <br /> Know how to set and manage budgets <br />
@@ -180,13 +182,14 @@ export default function Education() {
       ),
     },
     {
-      title: "2005",
+      title: "Swindon College",
+      date: "2005",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
-            Certificate in Business management - Swindon College
+            Certificate in Business management
           </p>
-          <p>
+          <p className="block text-sm">
             This course covered the major aspects of first line management
             including hiring, performance management and basic budgeting, it was
             the first management course I had taken and was a good overview of
@@ -196,14 +199,16 @@ export default function Education() {
       ),
     },
     {
-      title: "2000-2004",
+      title: "University of the West Of England",
+      date: "2000-2004",
       content: (
         <div>
           <p className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
-            BSc(Hons) Computer Science - University of the West Of England
+            BSc(Hons) Computer Science
           </p>
-          <p>
-            <b>Analytical modelling</b>
+          <p className="text-lg">Modules: </p>< br/>
+          <p className="block text-sm">
+            Analytical modelling
             <br /> score: 48
             <br />
             <br />
@@ -212,7 +217,7 @@ export default function Education() {
             model theoretical constructs.
             <br />
             <br />
-            <b>Component based development</b>
+            Component based development
             <br /> score: 52
             <br />
             <br />
@@ -221,7 +226,7 @@ export default function Education() {
             building a e-commerce book site with the ability for people to leave
             reviews (including a star rating), buy books and register their
             details to make checkout easier and faster in future. <br />
-            <br /> <b>Computer networks and operating systems</b>
+            <br /> Computer networks and operating systems
             <br /> score: 62
             <br />
             <br />
@@ -230,14 +235,14 @@ export default function Education() {
             operating system (ls, cd, pwd) and ultimately combining these into a
             custom shell on the OS, This module also covered the OSI model, IP
             addressing and routing. <br />
-            <br /> <b>Computer science concepts</b>
+            <br /> Computer science concepts
             <br /> score: 77
             <br />
             <br />
             Description: This module covered the basic concepts for computer
             science including Big O notation, P vs NP problems, binary
             arithmetic and basic cryptography <br />
-            <br /> <b>Computer systems</b>
+            <br /> Computer systems
             <br /> score: 58
             <br />
             <br />
@@ -245,7 +250,7 @@ export default function Education() {
             the project for this module involved writing a serial port to serial
             port communication protocol with encryption using x86 assembler.{" "}
             <br />
-            <br /> <b>Computing project</b>
+            <br /> Computing project
             <br /> score: 75
             <br />
             <br />
@@ -256,7 +261,7 @@ export default function Education() {
             different crawlers using different indexing methods to determine
             which would index the Internet the fastest given an arbitrary start
             point. <br />
-            <br /> <b>Data structures and databases</b>
+            <br /> Data structures and databases
             <br /> score: 54
             <br />
             <br />
@@ -264,21 +269,21 @@ export default function Education() {
             using it to store information in a efficient way, it examined all
             aspects of database design to minimize memory and disk usage while
             still being easily expandable and adaptable. <br />
-            <br /> <b>Declarative programming</b>
+            <br /> Declarative programming
             <br /> score: 58
             <br />
             <br />
             Description: This was an introduction to declarative programming
             using PROLOG and helped to understand the differences and benefits
             of declarative programming. <br />
-            <br /> <b>Design and analysis of algorithms</b>
+            <br /> Design and analysis of algorithms
             <br /> score: 57
             <br />
             <br />
             Description: This module looked at writing various sorting
             algorithms in Java (bubble sort, binary sort, quick sort) as well as
             different storing mechanisms such as binary tree&apos;s. <br />
-            <br /> <b>Formal language processing</b>
+            <br /> Formal language processing
             <br /> score: 76
             <br />
             <br />
@@ -286,14 +291,14 @@ export default function Education() {
             using Haskell and LISP, this combined together until ultimately I
             created a London Underground mapping system to find the quickest
             route from any two arbitrary points within the network. <br />{" "}
-            <b>Industrial placement</b>
+            Industrial placement
             <br /> score: Pass
             <br />
             <br />
             Description: I spent a year working for the NHS in WIltshire and
             applied some of the topics I had learnt over the past two years in a
             real world environment. <br />
-            <br /> <b>Information systems application context</b>
+            <br /> Information systems application context
             <br /> score: 65
             <br />
             <br />
@@ -301,14 +306,14 @@ export default function Education() {
             technology and involved case studies using private industry and the
             public sector to discuss what went well, what didn&apos;t and why.{" "}
             <br />
-            <br /> <b>Interface engineering</b>
+            <br /> Interface engineering
             <br /> score: 58
             <br />
             <br />
             Description: This module was an introduction to user interface
             design and showed the different ways information can be conveyed to
             the end user and when different methods should be used. <br />
-            <br /> <b>Professional, commercial & legal issues</b>
+            <br /> Professional, commercial & legal issues
             <br /> score: 58
             <br />
             <br />
@@ -317,20 +322,20 @@ export default function Education() {
             for our viewpoints, the project for this module was a presentation
             for an ethical business to a group of lecturers acting as angel
             investors. <br />
-            <br /> <b>Program development</b>
+            <br /> Program development
             <br /> score: 64
             <br />
             <br />
             Description: This was an introduction to Java programming and
             Focused on understanding the language and being able to solve
             problems in an object orientated model. <br />
-            <br /> <b>Software design</b>
+            <br /> Software design
             <br /> score: 56
             <br />
             <br />
             Description: This module focused on how to design software using UML
             including the backend systems and the user interface. <br />
-            <br /> <b>Software engineering</b>
+            <br /> Software engineering
             <br /> score: 48
             <br />
             <br />
@@ -338,7 +343,7 @@ export default function Education() {
             programming module and introduced advanced topics which culminated
             in writing a vending machine using object orientated principals.{" "}
             <br />
-            <br /> <b>Symbolic processing</b>
+            <br /> Symbolic processing
             <br /> score: 67
             <br />
             <br />
@@ -346,7 +351,7 @@ export default function Education() {
             the history of artificial intelligence, it&apos;s future and how
             AI&apos;s are built by providing the symbols that they need to
             process in order to understand the world. <br />
-            <br /> <b>Systems development</b>
+            <br /> Systems development
             <br /> score: 69
             <br />
             <br />
