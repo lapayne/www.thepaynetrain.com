@@ -22,6 +22,10 @@ const slugs = [
   "linux",
   "githubactions",
   "jenkins",
+  "firebase",
+  "wireshark",
+  "cloudflare",
+  "googlecloudstorage"
 ];
 
 function Skills() {
