@@ -8,7 +8,7 @@ import { GlareCard } from "./Gare-Card";
 type Tab = {
   title: string;
   value: string;
-  content?: string | React.ReactNode | any;
+  content: any[]; // Changed content type to any[] to accommodate your structure
 };
 
 export const Tabs = ({
@@ -115,11 +115,14 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+          className={cn("flex flex-row items-center w-full h-full absolute top-0 left-10 space-x-4", className)}
         >
-          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
-            {tab.content}
-          </GlareCard>
+          {tab.content.map((entry, index) => (
+            <GlareCard key={index} className="flex flex-row items-start justify-end">
+              {entry.entry} {/* Access the entry property */}
+            </GlareCard>
+          ))}
+          
         </motion.div>
       ))}
     </div>
