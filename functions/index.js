@@ -1,4 +1,4 @@
-const {onRequest, functions} = require("firebase-functions/v2/https");
+const {onRequest} = require("firebase-functions/v2/https");
 
 exports.sendEmail = onRequest(
     {secrets: ["SENDGRID_API_KEY"]},
@@ -7,7 +7,7 @@ exports.sendEmail = onRequest(
 
       try {
         // Access the SendGrid API key from the Firebase Functions config
-        const apiKey = functions.config().sendgrid_api.key;
+        const apiKey = process.env.SENDGRID_API_KEY;
         sgMail.setApiKey(apiKey);
 
         const {to, subject, text, html} = request.body;
