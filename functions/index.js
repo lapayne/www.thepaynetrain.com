@@ -1,16 +1,13 @@
-const {onRequest} = require("firebase-functions/v2/https");
-const {defineSecret} = require("firebase-functions/params");
-
-const sendGridApiKey = defineSecret("SENDGRID_API_KEY");
+const {onRequest, functions} = require("firebase-functions/v2/https");
 
 exports.sendEmail = onRequest(async (request, response) => {
   const sgMail = require("@sendgrid/mail");
 
   try {
-    const apiKey = await sendGridApiKey.get();
+    // Access the SendGrid API key from the Firebase Functions config
+    const apiKey = functions.config().sendgrid_api.key;
     sgMail.setApiKey(apiKey);
 
-    // Assuming you're sending data in the request body (e.g., JSON)
     const {to, subject, text, html} = request.body;
 
     if (!to || !subject || (!text && !html)) {
@@ -20,7 +17,7 @@ exports.sendEmail = onRequest(async (request, response) => {
 
     const msg = {
       to: to,
-      from: "website@thepaynetrain.com", // Make this configurable if needed
+      from: "website@thepaynetrain.com",
       subject: subject,
       text: text,
       html: html,
