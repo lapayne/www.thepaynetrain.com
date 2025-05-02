@@ -1,35 +1,36 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * const {onCall} = require("firebase-functions/v2/https");
- * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
+const {onRequest} = require("firebase-functions/v2/https");
+const {defineSecret} = require("firebase-functions/params");
 
-const {onRequest, functions} = require("firebase-functions/v2/https");
+const sendGridApiKey = defineSecret("SENDGRID_API_KEY");
 
-
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
-
-exports.sendEmail = onRequest((request, response) => {
+exports.sendEmail = onRequest(async (request, response) => {
   const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey(functions.config().sendgrid_api.key);
 
-  const msg = {
-    to: "lee@thepaynetrain.com", // Change to your recipient
-    from: "website@thepaynetrain.com", // Change to your verified sender
-    subject: "Sending with SendGrid is Fun",
-    text: "and easy to do anywhere, even with Node.js",
-    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-  };
-  sgMail
-      .send(msg)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  try {
+    const apiKey = await sendGridApiKey.get();
+    sgMail.setApiKey(apiKey);
+
+    // Assuming you're sending data in the request body (e.g., JSON)
+    const {to, subject, text, html} = request.body;
+
+    if (!to || !subject || (!text && !html)) {
+      response.status(400).send({error: "Missing required parameters."});
+      return;
+    }
+
+    const msg = {
+      to: to,
+      from: "website@thepaynetrain.com", // Make this configurable if needed
+      subject: subject,
+      text: text,
+      html: html,
+    };
+
+    await sgMail.send(msg);
+    console.log("Email sent successfully to:", to);
+    response.status(200).send({result: "Email sent successfully!"});
+  } catch (error) {
+    console.error("Error sending email:", error);
+    response.status(500).send({error: "Failed to send email."});
+  }
 });
