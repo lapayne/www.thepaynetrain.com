@@ -1,33 +1,35 @@
 const {onRequest, functions} = require("firebase-functions/v2/https");
 
-exports.sendEmail = onRequest(async (request, response) => {
-  const sgMail = require("@sendgrid/mail");
+exports.sendEmail = onRequest(
+    {secrets: ["SENDGRID_API_KEY"]},
+    async (request, response) => {
+      const sgMail = require("@sendgrid/mail");
 
-  try {
-    // Access the SendGrid API key from the Firebase Functions config
-    const apiKey = functions.config().sendgrid_api.key;
-    sgMail.setApiKey(apiKey);
+      try {
+        // Access the SendGrid API key from the Firebase Functions config
+        const apiKey = functions.config().sendgrid_api.key;
+        sgMail.setApiKey(apiKey);
 
-    const {to, subject, text, html} = request.body;
+        const {to, subject, text, html} = request.body;
 
-    if (!to || !subject || (!text && !html)) {
-      response.status(400).send({error: "Missing required parameters."});
-      return;
-    }
+        if (!to || !subject || (!text && !html)) {
+          response.status(400).send({error: "Missing required parameters."});
+          return;
+        }
 
-    const msg = {
-      to: to,
-      from: "website@thepaynetrain.com",
-      subject: subject,
-      text: text,
-      html: html,
-    };
+        const msg = {
+          to: to,
+          from: "website@thepaynetrain.com",
+          subject: subject,
+          text: text,
+          html: html,
+        };
 
-    await sgMail.send(msg);
-    console.log("Email sent successfully to:", to);
-    response.status(200).send({result: "Email sent successfully!"});
-  } catch (error) {
-    console.error("Error sending email:", error);
-    response.status(500).send({error: "Failed to send email."});
-  }
-});
+        await sgMail.send(msg);
+        console.log("Email sent successfully to:", to);
+        response.status(200).send({result: "Email sent successfully!"});
+      } catch (error) {
+        console.error("Error sending email:", error);
+        response.status(500).send({error: "Failed to send email."});
+      }
+    });
