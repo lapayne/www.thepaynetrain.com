@@ -12,9 +12,9 @@ exports.sendEmail = onRequest(
           const apiKey = process.env.SENDGRID_API_KEY;
           sgMail.setApiKey(apiKey);
 
-          const {to, subject, text, html} = request.body;
+          const {subject, text, html} = request.body;
 
-          if (!to || !subject || (!text && !html)) {
+          if (!subject || (!text && !html)) {
             response.status(400).send({error: "Missing required parameters."});
             return;
           }

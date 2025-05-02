@@ -146,7 +146,7 @@ const Footer = () => {
                 <input
                   type="email"
                   id="email"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-black-100 leading-tight focus:outline-none focus:shadow-outline bg-black-200 border-black-400"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-white-100 leading-tight focus:outline-none focus:shadow-outline bg-black-200 border-black-400"
                   value={email}
                   onChange={handleEmailChange}
                   required
@@ -161,7 +161,7 @@ const Footer = () => {
                 </label>
                 <textarea
                   id="message"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-black-100 leading-tight focus:outline-none focus:shadow-outline bg-black-200 border-black-400 h-32 resize-none"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-white-100 leading-tight focus:outline-none focus:shadow-outline bg-black-200 border-black-400 h-32 resize-none"
                   value={message}
                   onChange={handleMessageChange}
                   required
