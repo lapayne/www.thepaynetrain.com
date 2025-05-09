@@ -115,14 +115,23 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("flex flex-row items-center w-full h-full absolute top-0 left-10 space-x-4", className)}
+          className={cn(
+            "flex flex-row items-center w-full h-full absolute top-0 left-10 space-x-4",
+            className
+          )}
         >
           {tab.content.map((entry, index) => (
-            <GlareCard key={index} className="flex flex-row items-start justify-end">
+            <GlareCard
+              key={index}
+              className="flex flex-row items-start justify-end"
+            >
+              <img
+                className="h-full w-full absolute inset-0 object-cover"
+                src={entry.image}
+              />
               {entry.entry} {/* Access the entry property */}
             </GlareCard>
           ))}
-          
         </motion.div>
       ))}
     </div>
