@@ -5,7 +5,7 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
   {
     name: "Resume",
-    link: "/cv.pdf",
+    link: "#resume",
   },
 ];
 

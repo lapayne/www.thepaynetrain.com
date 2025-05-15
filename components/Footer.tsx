@@ -12,7 +12,8 @@ const Footer = () => {
   const [isSending, setIsSending] = useState(false);
   const [sendError, setSendError] = useState("");
   const [sendSuccess, setSendSuccess] = useState(false);
-
+  const [buttonText, setButtonText] = useState("Download CV");
+  const [buttonState, setButtonState] = useState(false);
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -73,6 +74,26 @@ const Footer = () => {
     }
   };
 
+   
+
+
+  const handleDownload = () => {
+    const pdfUrl = "/CV.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setButtonText("CV Downloaded");
+    setButtonState(true)
+    setTimeout(() => {
+      setButtonText("Download CV");
+      setButtonState(false)
+    }, 3000);
+  };
+
   return (
     <footer className="w-full mb-[100px] md:mb-5 pb-10" id="contact">
       <div>
@@ -99,8 +120,13 @@ const Footer = () => {
         <Button
             onClick={openModal}
         >Contact Me</Button>
-     
+
       </div>
+      <br /> <br />
+       <div id = "resume"  className="flex flex-col items-center">       
+             <Button disabled= {buttonState} id="downloadcv" onClick={handleDownload}
+            
+        >{buttonText}</Button></div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <div className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Lee Payne
@@ -119,6 +145,9 @@ const Footer = () => {
           ))}
         </div>
       </div>
+
+
+
       {isModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-50">
           <div className="bg-black-300 rounded-lg p-8 w-full max-w-md">
