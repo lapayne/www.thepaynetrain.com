@@ -34,12 +34,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
-      ref={containerRef}
-    >
+    <div className="w-full  font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="heading text-purple dark:text-purple max-w-4xl">
+        <h2 className="heading text-purple dark:text-purple max-w-4xl bg-center">
           My educational journey
         </h2>
       </div>
@@ -55,13 +52,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-2xl font-bold text-neutral-500 dark:text-neutral-500 ">
-                {item.title} <br />{item.date}
+                {item.title} <br />
+                {item.date}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title} <br />{item.date}
+                {item.title} <br />
+                {item.date}
               </h3>
               {item.content}{" "}
             </div>

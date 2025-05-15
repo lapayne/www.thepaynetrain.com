@@ -4,24 +4,12 @@ import { Timeline } from "@/components/ui/WorkTimeline";
 export default function Work() {
   const data = [
     {
-      title: "BJSS",
-      date: "Dec 24 - Present",
-      content: (
-        <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
-            <b>Managed Services Practice Engineering Lead</b>
-          </div>
-          <br />
-        </div>
-      ),
-    },
-    {
       title: "BJSS ",
-      date: "Aug 22 - Dec 24",
+      date: "Aug 22 - Present",
       content: (
         <div>
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
-            <b>Managed Services Engineering Lead</b>
+            <b>Managed Services Engineering and Practice Lead</b>
           </div>
           <br />
 
@@ -99,7 +87,7 @@ export default function Work() {
     },
     {
       title: "Computershare",
-      date:  "Jul 19 - Sep 21",
+      date: "Jul 19 - Sep 21",
       content: (
         <div>
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">

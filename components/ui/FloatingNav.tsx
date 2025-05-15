@@ -9,7 +9,8 @@ import {
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import MagicButton from "../ui/MagicButton";
+import { Button } from "./MovingBorder";
+
 export const FloatingNav = ({
   navItems,
   className,
@@ -42,6 +43,16 @@ export const FloatingNav = ({
     }
   });
 
+  const handleNavigation = (link: string) => {
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -61,8 +72,9 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
         
+        {navItems.map((navItem: any, idx: number) => (
+        /*
         <Link
             key={`link=${idx}`}
             href={navItem.link}
@@ -73,7 +85,15 @@ export const FloatingNav = ({
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
-          
+          */
+          <Button
+          key={navItem.name}
+        borderRadius="1.75rem"
+        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+        onClick={() => handleNavigation(navItem.link)}
+      >
+        {navItem.name}
+      </Button>
 
         ))}
       </motion.div>
