@@ -8,7 +8,7 @@ import Education from "@/components/Education";
 import Work from "@/components/work";
 import Projects from "@/components/Projects";
 import Certs from "@/components/Certs";
-import {analytics, logEvent} from "@/firebase";
+import {analytics, logEvent} from "firebase";
 export default function Home() {
 
   useEffect(() => {
