@@ -12,7 +12,7 @@ export default function Certs() {
           image: "/sl.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>ITIL Strategic Manager</div> <br />
+              <div className = "text-purple dark:text-purple">ITIL Strategic Manager</div> <br />
             </div>
           ),
         },
@@ -20,7 +20,7 @@ export default function Certs() {
           image: "/mp.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>ITIL Managing Professional</div>
+              <div className = "text-purple dark:text-purple">ITIL Managing Professional</div>
             </div>
           ),
         },
@@ -31,10 +31,10 @@ export default function Certs() {
       value: "Project",
       content: [
         {
-          image: "/prince2.jpg",
+          image: "/prince2.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>PRINCE2 Practioner</div>
+              <div className = "text-purple dark:text-purple">PRINCE2 Practioner</div>
             </div>
           ),
         },
@@ -48,7 +48,7 @@ export default function Certs() {
           image: "/cmi.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>CMI L5 Leadership and Management</div>
+              <div className = "text-purple dark:text-purple">CMI L5 Leadership and Management</div>
             </div>
           ),
         },
@@ -56,7 +56,7 @@ export default function Certs() {
           image: "/cmi.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>CMI L7 Professional Consultancy</div>
+              <div className = "text-purple dark:text-purple">CMI L7 Professional Consultancy</div>
             </div>
           ),
         },
@@ -70,7 +70,7 @@ export default function Certs() {
           image: "/cmi.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>Charted Manager</div>
+              <div className = "text-purple dark:text-purple">Charted Manager</div>
             </div>
           ),
         },
@@ -78,7 +78,7 @@ export default function Certs() {
           image: "/bf.png",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
-              <div>Chair Of Governors Bridge Farm Primary School</div>
+              <div className = "text-purple dark:text-purple">Chair Of Governors Bridge Farm Primary School</div>
             </div>
           ),
         },

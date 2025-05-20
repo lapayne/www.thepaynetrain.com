@@ -1,6 +1,6 @@
 // utils/firebase.ts
 import { initializeApp, FirebaseApp } from 'firebase/app';
-import { getAnalytics, FirebaseAnalytics, logEvent } from 'firebase/analytics';
+import { getAnalytics, Analytics, logEvent } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -15,7 +15,7 @@ const firebaseConfig = {
 };
 
 let firebaseApp: FirebaseApp | null = null;
-let analytics: FirebaseAnalytics | null = null;
+let analytics: Analytics | null = null;
 
 if (typeof window !== 'undefined') {
   if (!firebaseApp) {
