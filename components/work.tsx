@@ -4,8 +4,19 @@ import { Timeline } from "@/components/ui/WorkTimeline";
 export default function Work() {
   const data = [
     {
-      title: "BJSS ",
-      date: "Aug 22 - Present",
+      title: "CGI",
+      date: "July 25 - Present",
+      content: (
+        <div>
+          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+            <b>Unified DevOps Manager</b>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "BJSS",
+      date: "Aug 22 - Jul 25",
       content: (
         <div>
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
