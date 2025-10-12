@@ -364,11 +364,7 @@ export default function Education() {
     },
   ];
   return (
-    <div
-      id="education"
-      className="w-full data"
-      data-testid="education-component"
-    >
+    <div id="education" className="w-full data">
       <Timeline data={data} />
     </div>
   );
