@@ -1,7 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* In Tailwind CSS v4, the three @tailwind directives are replaced 
+with a single standard CSS @import. 
+*/
+@import "tailwindcss";
 
+/* The new @theme directive is used to configure Tailwind's design 
+tokens, replacing the 'theme' section in the old tailwind.config.js. 
+You can use it to define CSS variables that Tailwind will 
+convert into utility classes (like bg-primary, rounded-md, etc.).
+*/
+@theme {
+  /* COLORS: 
+     The variables you defined in :root are for CSS. 
+     To make Tailwind generate utility classes (like bg-primary),
+     you need to map them using the @theme directive. 
+     
+     NOTE: Tailwind v4 can often use your CSS variables directly if 
+     they follow a standard naming convention, but to be explicit 
+     and generate the standard utilities:
+  */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* RADIUS: 
+     This maps your --radius variable to Tailwind's 'DEFAULT' radius scale. 
+     This is what makes 'rounded' or 'rounded-md' work.
+  */
+  --radius-default: var(--radius);
+}
+
+/* This first @layer base block should be merged with the root CSS 
+where the Tailwind theme is imported. 
+You still define your raw CSS variables here. 
+*/
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -34,6 +81,7 @@
 
     --radius: 0.5rem;
 
+    /* Non-Tailwind-related standard CSS */
     ::selection {
       background: none;
     }
@@ -59,6 +107,7 @@
     }
   }
 
+  /* Dark mode class remains the same */
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -90,6 +139,7 @@
   }
 }
 
+/* Base styles using @apply remain the same */
 @layer base {
   * {
     @apply border-border !scroll-smooth;
@@ -98,10 +148,14 @@
     @apply bg-background text-foreground;
   }
   button {
-    @apply active:outline-none;
+    /* outline-none might be deprecated/renamed in v4, 
+       but active:outline-none is likely still fine. 
+       If you encounter issues, it's now 'outline-hidden' in v4. */
+    @apply active:outline-hidden;
   }
 }
 
+/* Utility styles remain the same */
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center capitalize;
@@ -112,10 +166,11 @@
   }
 }
 
+/* Non-Tailwind CSS remains the same */
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 3 columns of equal width */
-  grid-gap: 20px; /* Add spacing between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .item {

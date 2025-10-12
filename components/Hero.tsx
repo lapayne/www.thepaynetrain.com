@@ -1,6 +1,4 @@
 "use client";
-import { FaLocationArrow } from "react-icons/fa6";
-import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TypewriterEffectSmooth } from "./ui/TypewriterEffect";
 
@@ -40,11 +38,15 @@ const Hero = () => {
         />
       </div>
 
-      <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      {/* *** MODIFIED BACKGROUND CONTAINER: ***
+        1. Changed 'bg-white' to 'bg-black-100' (your dark color) 
+        2. Changed the light mask color to match the dark background
+      */}
+      <div className="h-screen w-full bg-black-100 dark:bg-black-100 dark:bg-grid-white/[0.1] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 dark:bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="flex justify-center relative my-20-z-10">
+      <div className="flex justify-center relative my-20 -z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <img
             src="/avatar.jpg"
@@ -52,7 +54,7 @@ const Hero = () => {
             className="rounded-full w-80 h-80 border-2 border-white-100 mb-5"
           />
           <h2 className="uppercase tracking-widest text-4xl text-center text-blue-100 max-w-80">
-           Lee Payne
+            Lee Payne
           </h2>
           <TypewriterEffectSmooth
             className="text-center md:text-5xl lg:text-6xl my-5"
@@ -62,8 +64,6 @@ const Hero = () => {
             Hi, I&apos;m Lee, an experienced manager in building high
             performance teams and operational excellence.
           </div>
-
-
         </div>
       </div>
     </div>

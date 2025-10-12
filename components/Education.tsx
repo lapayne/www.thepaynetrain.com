@@ -14,7 +14,6 @@ export default function Education() {
           <div className="text-lg">Modules:</div>
           <br />
           <div className="block text-sm">
-         
             MBA Stage 1<br />
             <br /> Managing Technological Innovation
             <br />
@@ -27,7 +26,7 @@ export default function Education() {
             <br /> Project Management
             <br />
             <br /> The Management Initiative (Capstone Project)
-            </div>
+          </div>
         </div>
       ),
     },
@@ -40,7 +39,7 @@ export default function Education() {
             Postgraduate Certificate Technology Management
           </div>
           <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          <div className="text-lg">Modules:</div>
+            <div className="text-lg">Modules:</div>
             <br />
 
             <div className="block text-sm">
@@ -56,7 +55,6 @@ export default function Education() {
               <br />
               <br /> Evidence Based Initiative
             </div>
-  
           </div>
         </div>
       ),
@@ -69,7 +67,8 @@ export default function Education() {
           <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
             Level 5 Diploma - leadership and management
           </div>
-          <div className="text-lg">Modules: </div>< br/>
+          <div className="text-lg">Modules: </div>
+          <br />
           <div className="block text-sm">
             Being a Leader
             <br />
@@ -81,7 +80,7 @@ export default function Education() {
             styles and approaches designed to promote a culture of mutual trust,
             respect and support. <br />
             <br />
-          Learning outcomes
+            Learning outcomes
             <br />
             Understand factors which impact on an organization&apos;s internal
             environment <br />
@@ -140,7 +139,7 @@ export default function Education() {
             management
             <br />
             <br />
-          Managing Recruitment, Selection and Induction
+            Managing Recruitment, Selection and Induction
             <br />
             <br /> Description: This unit has been designed to equip learners
             with an understanding of the factors which impact on recruitment.
@@ -160,7 +159,7 @@ export default function Education() {
             <br /> Understand strategies for retaining talent
             <br />
             <br />
-           Organizational Financial Management
+            Organizational Financial Management
             <br />
             <br /> The aim of this unit is to enable learners to understand how
             financial systems operate within organizations. Learners will
@@ -171,7 +170,7 @@ export default function Education() {
             financial management, which will translate into improved management
             skills. <br />
             <br />
-          Learning outcomes
+            Learning outcomes
             <br /> Understand finance within organizations
             <br />
             <br /> Know how to set and manage budgets <br />
@@ -206,7 +205,8 @@ export default function Education() {
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             BSc(Hons) Computer Science
           </div>
-          <div className="text-lg">Modules: </div>< br/>
+          <div className="text-lg">Modules: </div>
+          <br />
           <div className="block text-sm">
             Analytical modelling
             <br /> score: 48
@@ -364,7 +364,11 @@ export default function Education() {
     },
   ];
   return (
-    <div  id="education" className="w-full">
+    <div
+      id="education"
+      className="w-full data"
+      data-testid="education-component"
+    >
       <Timeline data={data} />
     </div>
   );
