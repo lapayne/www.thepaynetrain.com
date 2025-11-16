@@ -7,6 +7,7 @@ export const navItems = [
     name: "Resume",
     link: "#resume",
   },
+  { name: "Blog", link: "https://blog.thepaynetrain.com" },
 ];
 
 export const socialMedia = [
