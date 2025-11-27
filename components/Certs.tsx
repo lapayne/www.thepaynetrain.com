@@ -52,6 +52,15 @@ export default function Certs() {
             </div>
           ),
         },
+
+        {
+          image: "/cmi.png",
+          entry: (
+            <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-black">
+              <div>CMI L7 Professional Consultancy</div>
+            </div>
+          ),
+        },
       ],
     },
     {
@@ -67,7 +76,7 @@ export default function Certs() {
           ),
         },
         {
-          image: "/bf.png",
+          image: "/bf.gif",
           entry: (
             <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-base md:text-xl font-bold text-white">
               <div>Chair Of Governors Bridge Farm Primary School</div>

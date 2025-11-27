@@ -11,6 +11,23 @@ export default function Work() {
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
             <b>Unified DevOps Manager</b>
           </div>
+          <br />
+
+          <ul className="list-disc pl-4 space-y-2">
+            <li>
+              Responsible for all managing a squad within the Unified DevOps
+              team of 30 people
+            </li>
+            <li>
+              Acting as the most senior technical resource within Unified DevOps
+            </li>
+            <li>Working on new bid work for the team</li>
+            <li>
+              Working on engagements to help define the strategy with all
+              stakeholders
+            </li>
+            <li>Championing DevOps within Global Technology Operations</li>
+          </ul>
         </div>
       ),
     },
