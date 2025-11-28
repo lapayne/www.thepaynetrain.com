@@ -1,6 +1,5 @@
 // src/lib/firebase.ts
 import { initializeApp, FirebaseApp } from "firebase/app";
-import { getAnalytics, Analytics } from "firebase/analytics";
 
 // 1. Firebase Configuration (Get this from your Firebase Console)
 const firebaseConfig = {
@@ -15,16 +14,5 @@ const firebaseConfig = {
 
 // Use type union to allow initialization or null/undefined before check
 let app: FirebaseApp | null = null;
-let analytics: Analytics | undefined = undefined;
 
-if (typeof window !== "undefined") {
-  // 👈 This is crucial for SPA/SSR safety
-  app = initializeApp(firebaseConfig);
-  try {
-    analytics = getAnalytics(app);
-  } catch (error) {
-    console.error("Failed to initialize Firebase Analytics:", error);
-  }
-}
-
-export { app, analytics };
+export { app };
