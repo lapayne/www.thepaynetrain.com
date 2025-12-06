@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { FaLocationArrow } from "react-icons/fa6";
 import { Spotlight } from "./ui/Spotlight";
 import { socialMedia } from "@/data";
 import { Button } from "./ui/MovingBorder";
-import {useState} from "react";
+import { useState } from "react";
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,15 +26,15 @@ const Footer = () => {
     setSendSuccess(false);
   };
 
-  const handleEmailChange = (event:any) => {
+  const handleEmailChange = (event: any) => {
     setEmail(event.target.value);
   };
 
-  const handleMessageChange = (event:any) => {
+  const handleMessageChange = (event: any) => {
     setMessage(event.target.value);
   };
 
-  const handleSubmit = async (event:any) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     setIsSending(true);
     setSendError("");
@@ -42,7 +42,7 @@ const Footer = () => {
 
     try {
       const response = await fetch(
-        "https://sendemail-2iad2skovq-uc.a.run.app",
+        "https://us-central1-thepaynetrain-com.cloudfunctions.net/sendEmail",
         {
           method: "POST",
           headers: {
@@ -74,9 +74,6 @@ const Footer = () => {
     }
   };
 
-   
-
-
   const handleDownload = () => {
     const pdfUrl = "/CV.pdf";
     const link = document.createElement("a");
@@ -87,10 +84,10 @@ const Footer = () => {
     document.body.removeChild(link);
 
     setButtonText("CV Downloaded");
-    setButtonState(true)
+    setButtonState(true);
     setTimeout(() => {
       setButtonText("Download CV");
-      setButtonState(false)
+      setButtonState(false);
     }, 3000);
   };
 
@@ -109,24 +106,21 @@ const Footer = () => {
           className="w-full h-full opacity-100 "
         />
       </div>
-
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]"></h1>
         <div className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </div>
-     
-        <Button
-            onClick={openModal}
-        >Contact Me</Button>
 
+        <Button onClick={openModal}>Contact Me</Button>
       </div>
       <br /> <br />
-       <div id = "resume"  className="flex flex-col items-center">       
-             <Button disabled= {buttonState} id="downloadcv" onClick={handleDownload}
-            
-        >{buttonText}</Button></div>
+      <div id="resume" className="flex flex-col items-center">
+        <Button disabled={buttonState} id="downloadcv" onClick={handleDownload}>
+          {buttonText}
+        </Button>
+      </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <div className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Lee Payne
@@ -145,9 +139,6 @@ const Footer = () => {
           ))}
         </div>
       </div>
-
-
-
       {isModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-50">
           <div className="bg-black-300 rounded-lg p-8 w-full max-w-md">
