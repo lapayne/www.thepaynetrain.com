@@ -42,18 +42,19 @@ const Footer = () => {
 
     try {
       const response = await fetch(
-        "https://us-central1-thepaynetrain-com.cloudfunctions.net/sendEmail",
+        "https://us-central1-thepaynetrain-com.cloudfunctions.net/sendContactEmail",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            subject: `Contact Form Submission from ${email}`,
-            text: message,
-            html: `<p><strong>Email:</strong> ${email}</p><p>${message}</p>`,
+            data: {
+              email: email,
+              message: message,
+            },
           }),
-        }
+        },
       );
 
       if (response.ok) {
@@ -64,7 +65,7 @@ const Footer = () => {
       } else {
         const errorData = await response.json();
         setSendError(
-          errorData?.error || "Failed to send email. Please try again."
+          errorData?.error || "Failed to send email. Please try again.",
         );
       }
     } catch (error) {
