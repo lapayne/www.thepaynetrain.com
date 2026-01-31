@@ -13,6 +13,6 @@ const firebaseConfig = {
 };
 
 // Use type union to allow initialization or null/undefined before check
-let app: FirebaseApp | null = null;
+const app: FirebaseApp | null = null;
 
 export { app };
