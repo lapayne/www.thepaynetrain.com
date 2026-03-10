@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
 export const metadata: Metadata = {
   title: "Lee Payne's Portfolio",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${geist.variable} font-sans`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
         <ThemeProvider
           attribute="class"

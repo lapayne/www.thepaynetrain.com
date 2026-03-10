@@ -8,7 +8,7 @@ export default function Work() {
       date: "July 25 - Present",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Unified DevOps Manager</b>
           </div>
           <br />
@@ -36,7 +36,7 @@ export default function Work() {
       date: "Aug 22 - Jul 25",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Managed Services Engineering and Practice Lead</b>
           </div>
           <br />
@@ -73,7 +73,7 @@ export default function Work() {
       date: " Sep 21 - Aug 22",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Engineering Manager</b>
           </div>
           <br />
@@ -118,9 +118,8 @@ export default function Work() {
       date: "Jul 19 - Sep 21",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Web Environments Manager</b>
-            <br />
           </div>
           <ul className="list-disc pl-4 space-y-2">
             <li>
@@ -167,9 +166,8 @@ export default function Work() {
       date: "Mar 18 – Jul 19",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Server, Storage, Data Centre and Open Systems Manger</b>
-            <br />
           </div>
           <ul className="list-disc pl-4 space-y-2">
             <li>Managing vendor relationships</li>
@@ -227,9 +225,8 @@ export default function Work() {
       date: "Mar 16 - Mar 18",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Network & Voice Manager</b>
-            <br />
           </div>
           <ul className="list-disc pl-4 space-y-2">
             <li>Managing vendor relationships</li>
@@ -296,7 +293,7 @@ export default function Work() {
       date: "Jul 13-Mar 16",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Network Engineer</b>
           </div>
           <br />
@@ -309,7 +306,7 @@ export default function Work() {
       date: "Mar 06 – Jun 13",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Server Support Engineer</b>
           </div>
           <br />
@@ -322,7 +319,7 @@ export default function Work() {
       date: "Jul 04 – Mar 06",
       content: (
         <div>
-          <div className="text-gray-900 dark:text-gray-300 text-lg md:text-lg font-normal mb-4">
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
             <b>Desktop/Server Support Engineer</b>
           </div>
           <br />
