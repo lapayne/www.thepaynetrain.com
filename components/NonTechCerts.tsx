@@ -22,11 +22,6 @@ export default function NonTechCerts() {
       title: "CMI L5 Leadership and Management",
       src: "/cmi.png",
     },
-
-    {
-      title: "CMI L7 Strategic Leadership",
-      src: "/cmi.png",
-    },
     {
       title: "Chartered Manager",
       src: "/cmi.png",
@@ -41,7 +36,7 @@ export default function NonTechCerts() {
     <div id="certs" className="my-10 py-10">
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h1 className="heading">My certifications and affiliations</h1> <br />
-        <h2 className=" text-purple dark:text-purple max-w-4xl bg-center text-center mb-8">
+        <h2 className=" text-purple-600 dark:text-purple-600 text-3xl font-bold  max-w-4xl text-center mb-8">
           Non Technical Qualifications
         </h2>
       </div>

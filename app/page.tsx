@@ -8,6 +8,7 @@ import Education from "@/components/Education";
 import Work from "@/components/work";
 
 import NonTechCerts from "@/components/NonTechCerts";
+import TechCerts from "@/components/TechCerts";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Skills />
 
         <NonTechCerts />
+        <TechCerts />
 
         <Work />
         <Education />
