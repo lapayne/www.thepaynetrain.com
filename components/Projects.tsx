@@ -14,27 +14,29 @@ const Projects = () => {
 
       <div className="relative max-w-7xl mx-auto pb-20 flex flex-row flex-wrap gap-8 justify-center">
         {projects.map(({ id, name, description, href, img }) => (
-          <Link // Use Link to make the entire card clickable
+          <Link 
             key={id}
             href={href}
             className={cn(
-              "cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl max-w-sm item flex-shrink-0",
-              "bg-cover"
+              "group/card cursor-pointer overflow-hidden relative card h-[28rem] rounded-2xl shadow-2xl max-w-sm w-full flex-shrink-0 transition-all duration-500 hover:scale-[1.02] glassmorphism-dark",
+              "bg-cover bg-center"
             )}
             style={{ backgroundImage: `url(${img})` }}
           >
-            <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
-            <div className="flex flex-row items-center space-x-4 z-10">
-              <div className="flex flex-col">
-                <div className="font-normal text-base text-gray-50 relative z-10">
+            <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover/card:opacity-40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+            
+            <div className="relative h-full w-full p-6 flex flex-col justify-end">
+              <div className="z-10 transform transition-transform duration-500 group-hover/card:-translate-y-2">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2">
                   {name}
+                </h3>
+                <p className="font-light text-sm text-gray-300 line-clamp-3">
+                  {description}
+                </p>
+                <div className="mt-4 flex items-center text-purple text-sm font-medium opacity-0 group-hover/card:opacity-100 transition-opacity duration-500">
+                  View Project <span className="ml-2">→</span>
                 </div>
-              </div>
-            </div>
-            <div className="text content">
-              <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10"></h1>
-              <div className="font-normal text-sm text-gray-50 relative z-10 my-4">
-                {description}
               </div>
             </div>
           </Link>

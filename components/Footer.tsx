@@ -107,7 +107,7 @@ const Footer = () => {
           className="w-full h-full opacity-100 "
         />
       </div>
-      <div className="flex flex-col items-center">
+      <div className="p-10 rounded-md relative my-10 py-10 flex flex-col items-center glassmorphism-dark">
         <h1 className="heading lg:max-w-[45vw]"></h1>
         <div className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
@@ -142,7 +142,7 @@ const Footer = () => {
       </div>
       {isModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-50">
-          <div className="bg-black-300 rounded-lg p-8 w-full max-w-md">
+          <div className="glassmorphism-dark rounded-lg p-8 w-full max-w-md">
             <h2 className="text-xl font-semibold text-white-100 mb-4">
               Contact Me
             </h2>

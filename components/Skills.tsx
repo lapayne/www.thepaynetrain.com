@@ -1,5 +1,5 @@
 "use client";
-import { IconCloud } from "@/components/ui/IconCloud";
+import { IconCloud } from "./ui/IconCloud";
 
 const slugs = [
   "typescript",
@@ -25,7 +25,7 @@ const slugs = [
   "firebase",
   "wireshark",
   "cloudflare",
-  "googlecloudstorage"
+  "googlecloudstorage",
 ];
 
 function Skills() {

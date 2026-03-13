@@ -1,5 +1,5 @@
 import React from "react";
-import { Timeline } from "@/components/ui/Timeline";
+import { Timeline } from "./ui/Timeline";
 
 export default function Education() {
   const data = [
