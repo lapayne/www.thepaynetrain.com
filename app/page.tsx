@@ -6,8 +6,8 @@ import { navItems } from "@/data";
 import Quotes from "@/components/Quotes";
 import Education from "@/components/Education";
 import Work from "@/components/work";
-import Projects from "@/components/Projects";
-import Certs from "@/components/Certs";
+
+import NonTechCerts from "@/components/NonTechCerts";
 
 export default function Home() {
   return (
@@ -18,11 +18,11 @@ export default function Home() {
         <Quotes />
         <Skills />
 
-        <Certs />
+        <NonTechCerts />
 
         <Work />
         <Education />
-        <Projects />
+
         <Footer />
       </div>
     </main>
