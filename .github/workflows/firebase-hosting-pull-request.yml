@@ -26,7 +26,7 @@ jobs:
 
       # Run tests against localhost
       - name: Start local server
-        run: npm run preview &
+        run: npm run dev &
 
       - name: Wait for local server
         run: npx wait-on http://localhost:4173
