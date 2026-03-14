@@ -1,20 +1,21 @@
 import { expect, test, defineConfig } from "@playwright/test";
 
 export default defineConfig({
+  testDir: "./tests",
+
   use: {
-    baseURL: process.env.BASE_URL || "http://localhost:5173",
+    baseURL: process.env.BASE_URL || "http://localhost:3000",
     trace: "retain-on-failure",
   },
 
-  projects: [
-    {
-      name: "local",
-    },
-    {
-      name: "preview",
-      grep: /@smoke/,
-    },
-  ],
+  webServer: process.env.BASE_URL
+    ? undefined
+    : {
+        command: "npm run build && npm run start",
+        url: "http://localhost:3000",
+        reuseExistingServer: !process.env.CI,
+        timeout: 120000,
+      },
 });
 
 test.describe("Home Page", () => {

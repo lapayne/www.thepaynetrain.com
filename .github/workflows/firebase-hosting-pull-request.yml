@@ -24,10 +24,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Run tests against localhost
-      - name: Start local server
-        run: npm run dev &
-
       - name: Wait for local server
         run: npx wait-on http://localhost:3000
 
