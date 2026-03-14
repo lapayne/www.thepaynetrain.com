@@ -29,12 +29,12 @@ jobs:
         run: npm run dev &
 
       - name: Wait for local server
-        run: npx wait-on http://localhost:4173
+        run: npx wait-on http://localhost:3000
 
       - name: Run full Playwright suite (local)
         run: npx playwright test --project=local
         env:
-          BASE_URL: http://localhost:4173
+          BASE_URL: http://localhost:3000
 
       # Deploy preview
       - name: Deploy Firebase Preview
