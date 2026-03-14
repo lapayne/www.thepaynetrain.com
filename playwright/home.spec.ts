@@ -1,7 +1,24 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, defineConfig } from "@playwright/test";
+
+export default defineConfig({
+  use: {
+    baseURL: process.env.BASE_URL || "http://localhost:5173",
+    trace: "retain-on-failure",
+  },
+
+  projects: [
+    {
+      name: "local",
+    },
+    {
+      name: "preview",
+      grep: /@smoke/,
+    },
+  ],
+});
 
 test.describe("Home Page", () => {
-  test("loads and shows hero header", async ({ page }) => {
+  test("loads and shows hero header  @smoke", async ({ page }) => {
     await page.goto("/");
     await expect(
       page.getByRole("heading", { name: /Lee Payne/i }),
@@ -9,7 +26,7 @@ test.describe("Home Page", () => {
     await expect(page.getByText(/High-performance/i)).toBeVisible();
   });
 
-  test("footer contact button is visible", async ({ page }) => {
+  test("footer contact button is visible  @smoke", async ({ page }) => {
     await page.goto("/");
     await expect(
       page.getByRole("button", { name: /contact me/i }),
@@ -21,7 +38,7 @@ test.describe("Home Page", () => {
     await page.getByText("Quote of the day").click();
   });
 
-  test("header navigation links are present", async ({ page }) => {
+  test("header navigation links are present  @smoke", async ({ page }) => {
     await page.goto("/");
 
     // Check internal navigation links (scroll links) - look for buttons in nav
