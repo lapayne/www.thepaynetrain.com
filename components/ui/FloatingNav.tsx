@@ -7,7 +7,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { Button } from "./MovingBorder";
 
 export const FloatingNav = ({
@@ -64,8 +64,12 @@ export const FloatingNav = ({
       className="bg-black/80 dark:bg-black/90 text-white border-white/20 backdrop-blur-2xl hover:bg-white/10 transition-all duration-300 h-12 w-full flex flex-col items-center justify-center p-0"
     >
       <span className="block text-lg">{navItem.icon}</span>
-      <span className="hidden sm:block text-sm font-medium">{navItem.name}</span>
-      <span className="block sm:hidden text-[8px] font-bold uppercase tracking-widest mt-0.5">{navItem.name.substring(0, 3)}</span>
+      <span className="hidden sm:block text-sm font-medium">
+        {navItem.name}
+      </span>
+      <span className="block sm:hidden text-[8px] font-bold uppercase tracking-widest mt-0.5">
+        {navItem.name.substring(0, 3)}
+      </span>
     </Button>
   );
 
@@ -79,7 +83,7 @@ export const FloatingNav = ({
           transition={{ duration: 0.2 }}
           className={cn(
             "hidden sm:flex max-w-fit fixed top-10 inset-x-0 mx-auto z-[5000] px-10 py-5 items-center justify-center space-x-4 glassmorphism-dark rounded-xl",
-            className
+            className,
           )}
         >
           {navItems.map((navItem: any, idx: number) => {
@@ -127,7 +131,9 @@ export const FloatingNav = ({
             const content = (
               <div className="flex flex-col items-center justify-center py-2 text-white hover:text-purple transition-colors">
                 <span className="text-xl mb-1">{navItem.icon}</span>
-                <span className="text-[8px] font-bold uppercase tracking-widest">{navItem.name.substring(0, 3)}</span>
+                <span className="text-[8px] font-bold uppercase tracking-widest">
+                  {navItem.name.substring(0, 3)}
+                </span>
               </div>
             );
 
