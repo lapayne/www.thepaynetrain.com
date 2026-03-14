@@ -52,6 +52,7 @@
     "jest-environment-jsdom": "^30.3.0",
     "nodemailer": "^8.0.2",
     "tailwindcss": "^4.1.14",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   }
 }
