@@ -19,7 +19,7 @@ export default defineConfig({
 });
 
 test.describe("Home Page", () => {
-  test("loads and shows hero header  @smoke", async ({ page }) => {
+  test("loads and shows hero header @smoke", async ({ page }) => {
     await page.goto("/");
     await expect(
       page.getByRole("heading", { name: /Lee Payne/i }),
@@ -27,7 +27,7 @@ test.describe("Home Page", () => {
     await expect(page.getByText(/High-performance/i)).toBeVisible();
   });
 
-  test("footer contact button is visible  @smoke", async ({ page }) => {
+  test("footer contact button is visible @smoke", async ({ page }) => {
     await page.goto("/");
     await expect(
       page.getByRole("button", { name: /contact me/i }),
