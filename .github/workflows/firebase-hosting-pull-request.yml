@@ -48,7 +48,7 @@ jobs:
 
       # Run smoke tests against deployed preview
       - name: Run preview smoke tests
-        run: npx playwright test --project=preview
+        run: npx playwright test
         env:
           BASE_URL: ${{ steps.deploy.outputs.details_url }}
 
