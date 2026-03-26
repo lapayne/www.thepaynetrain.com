@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "npx eslint .",
     "test:ci": "jest",
     "test:watch": "jest --watch",
     "test:e2e": "playwright test"
@@ -46,6 +46,7 @@
     "@types/node-fetch": "^2.6.12",
     "@types/nodemailer": "^7.0.2",
     "@types/react-dom": "^19.0.2",
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.0.3",
     "eslint-config-next": "^16.0.3",
     "jest": "^30.3.0",
@@ -53,6 +54,7 @@
     "nodemailer": "^8.0.2",
     "tailwindcss": "^4.1.14",
     "ts-node": "^10.9.2",
+    "typescript-eslint": "^8.24.1",
     "typescript": "^5.7.2"
   }
 }
