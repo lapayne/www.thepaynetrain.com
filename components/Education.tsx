@@ -52,7 +52,7 @@ export default function Education() {
       title: "Chartered Management Institute",
       date: "2014",
       content: (
-        <div>
+        <div key="chartered-management-institute">
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             Level 5 Diploma - leadership and management
           </div>
@@ -73,7 +73,7 @@ export default function Education() {
       title: "Swindon College",
       date: "2005",
       content: (
-        <div>
+        <div key="swindon-college">
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             Certificate in Business management
           </div>
@@ -90,7 +90,7 @@ export default function Education() {
       title: "University of the West Of England",
       date: "2000-2004",
       content: (
-        <div>
+        <div key="university-of-the-west-of-england">
           <div className="text-gray-900 dark:text-gray-300 text-lg md:text-base font-normal mb-4">
             BSc(Hons) Computer Science
           </div>
