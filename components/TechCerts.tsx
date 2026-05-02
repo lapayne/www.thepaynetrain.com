@@ -27,6 +27,10 @@ export default function TechCerts() {
         "Microsoft® Certified Solutions Expert: Cloud Platform and Infrastructure",
       src: "/msmcse.png",
     },
+    {
+      title: "Google Cloud Certified: DevOps Engineer - Professional",
+      src: "/gcp-devops.png",
+    },
   ];
 
   return (

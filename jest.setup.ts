@@ -94,10 +94,6 @@ jest.mock("motion/react", () => {
   };
 });
 
-jest.mock("next-themes", () => ({
-  useTheme: () => ({ theme: "light" }),
-}));
-
 jest.mock("react-icon-cloud", () => ({
   __esModule: true,
   Cloud: ({ children }: any) => React.createElement("div", null, children),
