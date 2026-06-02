@@ -90,6 +90,7 @@ export const FloatingNav = ({
             const isScrollLink = isInternalScrollLink(navItem.link);
             const Content = (
               <Button
+                as="div"
                 borderRadius="1.75rem"
                 className="bg-black/20 text-white border-white/20 backdrop-blur-md hover:bg-white/10 transition-all duration-300 px-4 py-2"
               >

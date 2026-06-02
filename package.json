@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "npx eslint .",
     "test:ci": "jest",
     "test:watch": "jest --watch",
     "test:e2e": "playwright test"
@@ -37,6 +37,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@microsoft/microsoft-graph-types": "^2.43.1",
     "@playwright/test": "^1.58.2",
     "@testing-library/jest-dom": "^6.9.1",
@@ -44,7 +45,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^25.1.0",
     "@types/node-fetch": "^2.6.12",
-    "@types/nodemailer": "^7.0.2",
+    "@types/nodemailer": "^8.0.0",
     "@types/react-dom": "^19.0.2",
     "eslint": "^10.0.3",
     "eslint-config-next": "^16.0.3",
@@ -53,6 +54,7 @@
     "nodemailer": "^8.0.2",
     "tailwindcss": "^4.1.14",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.24.1"
   }
 }

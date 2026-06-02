@@ -5,7 +5,36 @@ export default function Work() {
   const data = [
     {
       title: "CGI",
-      date: "July 25 - Present",
+      date: "March 26 - Present",
+      content: (
+        <div>
+          <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">
+            <b>Director Of Consulting Expert: Devops and SRE</b>
+          </div>
+          <br />
+
+          <ul className="list-disc pl-4 space-y-2">
+            <li>
+              |Built s Devops Academy to upskill engineers across the business
+              and improve the quality of engagements
+            </li>
+            <li>
+              Trsnsitioned Landing Zone from the innovation team to operational
+              support and implemented a new support model
+            </li>
+            <li>Working on new bid work</li>
+            <li>
+              Worked as a senior technical resource on engagements to help
+              define the strategy
+            </li>
+            <li>Championing DevOps within Global Technology Operations</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "CGI",
+      date: "July 25 - March 26",
       content: (
         <div>
           <div className="text-cyan-400 dark:text-white text-lg md:text-xl font-heading font-semibold mb-4">

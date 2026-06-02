@@ -1,7 +1,5 @@
-"use client";
-
 import { useEffect, useMemo, useState } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/app/provider";
 import {
   Cloud,
   fetchSimpleIcons,
@@ -63,11 +61,18 @@ export type DynamicCloudProps = {
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
+function isIOS(): boolean {
+  if (typeof window === "undefined") return false;
+  return /iPad|iPhone|iPod/.test(navigator.userAgent);
+}
+
 export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
+  const [isIOSDevice, setIsIOSDevice] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
+    setIsIOSDevice(isIOS());
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
   }, [iconSlugs]);
 
@@ -78,6 +83,15 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
       renderCustomIcon(icon, theme || "light"),
     );
   }, [data, theme]);
+
+  // On iOS, render a static grid instead of the animated cloud to prevent crashes
+  if (isIOSDevice && data) {
+    return (
+      <div className="flex flex-wrap justify-center gap-4 py-10 px-4">
+        {renderedIcons}
+      </div>
+    );
+  }
 
   return (
     // @ts-ignore
