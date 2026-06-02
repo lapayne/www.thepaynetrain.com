@@ -31,6 +31,10 @@ export default function TechCerts() {
       title: "Google Cloud Certified: DevOps Engineer - Professional",
       src: "/gcp-devops.png",
     },
+    {
+      title: "AWS Certified DevOps Engineer - Professional",
+      src: "/aws_devops.png",
+    },
   ];
 
   return (
