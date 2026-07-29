@@ -13,6 +13,26 @@ import { onCall, HttpsError } from "firebase-functions/v2/https";
 import { Client } from "@microsoft/microsoft-graph-client";
 import { ClientSecretCredential } from "@azure/identity";
 import { TokenCredentialAuthenticationProvider } from "@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials/index.js";
+import { NextResponse } from "next/server";
+import { getRandomQuote } from "../../src/lib/quotes";
+
+export const dynamic = "force-dynamic"; // Prevent static caching of this route
+
+export async function GET() {
+  try {
+    const quote = getRandomQuote();
+    return NextResponse.json(quote);
+  } catch (error) {
+    console.error("Failed to get quote:", error);
+    return NextResponse.json(
+      {
+        text: "Simplicity is the soul of efficiency.",
+        author: "Austin Freeman",
+      },
+      { status: 500 },
+    );
+  }
+}
 
 export const sendContactEmail = onCall(
   {

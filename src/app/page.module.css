@@ -1,0 +1,204 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* About Section */
+.aboutSection {
+  background: radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.01) 0%, transparent 60%);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.aboutCardTitle {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.aboutText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.aboutText:last-child {
+  margin-bottom: 0;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.metricCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.25rem 1.5rem;
+  border-color: rgba(255, 255, 255, 0.03);
+}
+
+.metricCard:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px var(--accent-primary-glow);
+}
+
+.metricVal {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-secondary);
+}
+
+.metricLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Contact Section */
+.contactSection {
+  background: radial-gradient(circle at 10% 90%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
+}
+
+.contactCard {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactInfo h3, .contactForm h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.contactInfo p {
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.contactItem:hover {
+  color: var(--accent-secondary);
+  background: var(--accent-secondary-glow);
+  transform: translateX(4px);
+}
+
+.contactItem svg {
+  color: var(--accent-secondary);
+}
+
+/* Contact Form styling */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  transition: all var(--transition-fast);
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Footer styling */
+.footer {
+  background-color: #050608;
+  border-top: 1px solid var(--border-color);
+  padding: 2.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLinks a {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footerLinks a:hover {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 900px) {
+  .aboutGrid, .contactCard {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footerLinks {
+    justify-content: center;
+  }
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}
