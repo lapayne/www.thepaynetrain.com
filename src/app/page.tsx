@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import QuoteSection from "../components/QuoteSection";
@@ -6,16 +5,10 @@ import Timeline from "../components/Timeline";
 import Skills from "../components/Skills";
 import EducationCertifications from "../components/EducationCertifications";
 import ContactForm from "../components/ContactForm";
-import { getRandomQuote } from "../lib/quotes";
 import { resumeData } from "../data/resume";
 import styles from "./page.module.css";
 
-// Force Next.js to not cache page.tsx so the quote changes on hard reload
-export const revalidate = 0;
-
 export default function Home() {
-  const initialQuote = getRandomQuote();
-
   return (
     <div className={styles.appContainer}>
       <Header />
@@ -104,7 +97,7 @@ export default function Home() {
         </section>
 
         {/* Quote of the Day Section */}
-        <QuoteSection initialQuote={initialQuote} />
+        <QuoteSection />
 
         {/* Experience Timeline */}
         <Timeline />

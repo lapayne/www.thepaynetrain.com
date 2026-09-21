@@ -13,26 +13,8 @@ import { onCall, HttpsError } from "firebase-functions/v2/https";
 import { Client } from "@microsoft/microsoft-graph-client";
 import { ClientSecretCredential } from "@azure/identity";
 import { TokenCredentialAuthenticationProvider } from "@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials/index.js";
-import { NextResponse } from "next/server";
-import { getRandomQuote } from "../../src/lib/quotes";
 
 export const dynamic = "force-dynamic"; // Prevent static caching of this route
-
-export async function GET() {
-  try {
-    const quote = getRandomQuote();
-    return NextResponse.json(quote);
-  } catch (error) {
-    console.error("Failed to get quote:", error);
-    return NextResponse.json(
-      {
-        text: "Simplicity is the soul of efficiency.",
-        author: "Austin Freeman",
-      },
-      { status: 500 },
-    );
-  }
-}
 
 export const sendContactEmail = onCall(
   {
@@ -74,17 +56,5 @@ export const sendContactEmail = onCall(
     }
   },
 );
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
 
-// For cost control, you can set the maximum number of containers that can be
-// running at the same time. This helps mitigate the impact of unexpected
-// traffic spikes by instead downgrading performance. This limit is a
-// per-function limit. You can override the limit for each function using the
-// `maxInstances` option in the function's options, e.g.
-// `onRequest({ maxInstances: 5 }, (req, res) => { ... })`.
-// NOTE: setGlobalOptions does not apply to functions using the v1 API. V1
-// functions should each use functions.runWith({ maxInstances: 10 }) instead.
-// In the v1 API, each function can only serve one request per container, so
-// this will be the maximum concurrent request count.
 setGlobalOptions({ maxInstances: 10 });
