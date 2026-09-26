@@ -380,15 +380,26 @@ export const resumeData: ResumeData = {
       url: "https://www.axelos.com",
     },
     {
-      name: "Associate & Professional Cloud Certifications (AWS, Azure, GCP)",
-      issuer: "Cloud Providers",
+      name: "DevOps Engineer – Professional",
+      issuer: "AWS",
+      date: "Certified",
+    },
+    {
+      name: "DevOps Engineer Expert",
+      issuer: "Azure",
+      date: "Certified",
+    },
+    {
+      name: "Professional Cloud DevOps Engineer",
+      issuer: "Google Cloud",
       date: "Certified",
     },
   ],
   professionalBodies: [
-    "Chartered member of the Chartered Management Institute",
+    "Chartered Fellow of the Chartered Management Institute",
     "Member of the Association of MBA's",
     "Chartered Member of the British Computer Society",
+    "Charted IT Professional of the British Computer Society",
   ],
   hobbies: [
     "PADI-qualified scuba diver with experience diving in Australia and Turkey.",
