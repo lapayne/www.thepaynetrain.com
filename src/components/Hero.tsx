@@ -28,6 +28,15 @@ const getSocialIcon = (iconName: string) => {
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
         </svg>
       );
+    case "cpd":
+      return (
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 7c3.2-.9 6.2-.3 9 1.5 2.8-1.8 5.8-2.4 9-1.5v11c-3.2-.9-6.2-.3-9 1.5-2.8-1.8-5.8-2.4-9-1.5z" />
+          <path d="M12 8.5v11" />
+          <path d="M7 3a8 8 0 0 1 12 2" />
+          <path d="M19 2.5V6h-3.5" />
+        </svg>
+      );
     case "vr":
       return (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
