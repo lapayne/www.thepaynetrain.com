@@ -71,7 +71,7 @@ export const resumeData: ResumeData = {
     "Strategic IT and engineering leader driving business value through cloud, SRE, and DevOps transformation.",
   bio: "Strategic IT and engineering leader with extensive experience leading high-performing teams through complex technology and organisational change. Proven in defining and executing technology roadmaps, managing large operational budgets, and improving security, reliability, and cost efficiency at scale. Brings a pragmatic, people-first leadership style and a strong record of delivering tangible business value.",
   email: "lee@thepaynetrain.com",
-  phone: "Contact via Email",
+  phone: "07737860407",
   location: "United Kingdom",
   resumeUrl: "/resume.pdf",
   socials: [
@@ -81,8 +81,13 @@ export const resumeData: ResumeData = {
       icon: "linkedin",
     },
     {
-      label: "Website",
+      label: "My CPD",
       url: "https://cpd.thepaynetrain.com",
+      icon: "cpd",
+    },
+    {
+      label: "My Blog",
+      url: "https://blog.thepaynetrain.com",
       icon: "blog",
     },
   ],
